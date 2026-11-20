@@ -1,0 +1,1808 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>सुशीला (Maisaab) को लागि | Come Here Mama ❤️</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Great+Vibes&family=Mukta:wght@300;400;600;700;800&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --rose-primary: #ff4d6d;
+      --rose-dark: #c9184a;
+      --rose-deep: #800f2f;
+      --rose-light: #ff758f;
+      --rose-soft: #ffb3c1;
+      --rose-pale: #fff0f3;
+      --cream-bg: #fffbf9;
+      --kitty-pink: #ff85a1;
+      --kitty-gold: #f9bc60;
+      --text-dark: #3a1e27;
+      --text-muted: #6d4a55;
+      --shadow-soft: 0 10px 30px rgba(255, 77, 109, 0.15);
+      --shadow-card: 0 15px 35px rgba(201, 24, 74, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      font-family: 'Mukta', 'Quicksand', sans-serif;
+      background: linear-gradient(135deg, #fff2f5 0%, #ffe8ed 45%, #fff0f3 100%);
+      color: var(--text-dark);
+      min-height: 100vh;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* Falling Petals Canvas */
+    #petals-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      z-index: 99;
+    }
+
+    /* ENTRY OVERLAY: "Come here Mama (vitra aaunu mama)" */
+    #entry-gate {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: radial-gradient(circle at center, rgba(255, 240, 243, 0.98) 0%, rgba(255, 214, 223, 0.98) 60%, rgba(255, 179, 193, 0.98) 100%);
+      z-index: 1000;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      text-align: center;
+      transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    #entry-gate.unlocked {
+      opacity: 0;
+      transform: scale(1.06);
+      pointer-events: none;
+    }
+
+    .entry-card {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(14px);
+      border-radius: 32px;
+      padding: 36px 24px;
+      max-width: 440px;
+      width: 100%;
+      box-shadow: 0 25px 60px rgba(201, 24, 74, 0.25);
+      border: 3px solid #ffccd5;
+      animation: gentle-float 4s ease-in-out infinite alternate;
+      position: relative;
+    }
+
+    .entry-avatar-stack {
+      position: relative;
+      width: 110px;
+      height: 110px;
+      margin: 0 auto 16px;
+    }
+
+    .entry-avatar-img {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #ff4d6d;
+      box-shadow: 0 8px 25px rgba(255, 77, 109, 0.35);
+    }
+
+    .entry-kitty-badge {
+      position: absolute;
+      bottom: -6px;
+      right: -6px;
+      background: #ffffff;
+      border-radius: 50%;
+      padding: 4px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      border: 2px solid #ff85a1;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .entry-tag {
+      display: inline-block;
+      background: #ffe3e9;
+      color: var(--rose-dark);
+      padding: 5px 16px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .entry-title {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--rose-deep);
+      line-height: 1.25;
+      margin-bottom: 6px;
+    }
+
+    .entry-subtitle {
+      font-family: 'Caveat', cursive;
+      font-size: 1.7rem;
+      color: var(--rose-primary);
+      margin-bottom: 14px;
+    }
+
+    .entry-nepali-text {
+      font-size: 1.12rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+      margin-bottom: 24px;
+    }
+
+    .entry-btn {
+      background: linear-gradient(135deg, #ff4d6d 0%, #c9184a 100%);
+      color: #fff;
+      border: none;
+      padding: 16px 36px;
+      font-size: 1.22rem;
+      font-weight: 700;
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow: 0 10px 25px rgba(201, 24, 74, 0.4);
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'Mukta', sans-serif;
+    }
+
+    .entry-btn:hover {
+      transform: translateY(-3px) scale(1.03);
+      box-shadow: 0 14px 30px rgba(201, 24, 74, 0.5);
+    }
+
+    /* MAIN CONTAINER */
+    .app-container {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 20px 16px 90px;
+      position: relative;
+      z-index: 10;
+    }
+
+    /* TOP BAR / AMBIENT CONTROLS */
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 18px;
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      border: 1px solid rgba(255, 179, 193, 0.4);
+      margin-bottom: 24px;
+      box-shadow: 0 4px 15px rgba(255, 77, 109, 0.08);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .top-badge {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--rose-dark);
+    }
+
+    .top-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .control-btn {
+      background: #fff0f3;
+      border: 1px solid #ffccd5;
+      color: var(--rose-dark);
+      padding: 7px 14px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+      text-decoration: none;
+    }
+
+    .control-btn:hover {
+      background: #ffe3e9;
+      transform: scale(1.03);
+    }
+
+    /* HERO CARD WITH COVER PHOTO */
+    .hero-card {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 240, 243, 0.9) 100%);
+      border-radius: 36px;
+      padding: 34px 24px;
+      text-align: center;
+      box-shadow: var(--shadow-card);
+      border: 2px solid #ffd6df;
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 30px;
+    }
+
+    .hero-couple-showcase {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    .hero-couple-frame {
+      position: relative;
+      width: 170px;
+      height: 170px;
+      border-radius: 50%;
+      padding: 6px;
+      background: linear-gradient(135deg, #ff4d6d, #ffb3c1, #c9184a);
+      box-shadow: 0 12px 30px rgba(201, 24, 74, 0.28);
+      animation: gentle-glow 3s infinite alternate;
+    }
+
+    .hero-couple-img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      border: 3px solid #ffffff;
+    }
+
+    .hero-kitty-corner-bow {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 50px;
+      height: 50px;
+      transform: translate(25%, -25%) rotate(15deg);
+      filter: drop-shadow(0 4px 8px rgba(255, 77, 109, 0.35));
+    }
+
+    .hero-title {
+      font-size: 2.3rem;
+      font-weight: 800;
+      color: var(--rose-deep);
+      line-height: 1.25;
+      margin-bottom: 4px;
+    }
+
+    .hero-nickname {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3rem;
+      color: var(--rose-primary);
+      margin-bottom: 12px;
+      text-shadow: 1px 2px 4px rgba(201, 24, 74, 0.12);
+    }
+
+    .hero-lead-nepali {
+      font-size: 1.25rem;
+      color: var(--text-dark);
+      font-weight: 600;
+      line-height: 1.75;
+      max-width: 680px;
+      margin: 0 auto 20px;
+    }
+
+    .eternal-promise-banner {
+      background: linear-gradient(135deg, #ff4d6d, #800f2f);
+      color: #fff;
+      padding: 16px 26px;
+      border-radius: 24px;
+      font-size: 1.2rem;
+      font-weight: 700;
+      box-shadow: 0 10px 28px rgba(128, 15, 47, 0.28);
+      margin-top: 10px;
+      display: inline-block;
+      line-height: 1.65;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    /* HEARTFELT CONVINCING LETTER */
+    .letter-card {
+      background: #ffffff;
+      border-radius: 30px;
+      padding: 34px 26px;
+      box-shadow: var(--shadow-card);
+      border: 2px solid #ffe5ec;
+      margin-bottom: 32px;
+      position: relative;
+    }
+
+    .letter-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 20px;
+      padding-bottom: 14px;
+      border-bottom: 2px dashed #ffccd5;
+    }
+
+    .letter-icon {
+      font-size: 2.4rem;
+    }
+
+    .letter-title {
+      font-size: 1.55rem;
+      font-weight: 800;
+      color: var(--rose-deep);
+    }
+
+    .letter-body {
+      font-size: 1.15rem;
+      line-height: 1.85;
+      color: #55333e;
+    }
+
+    .letter-body p {
+      margin-bottom: 16px;
+    }
+
+    .highlight-quote {
+      background: #fff0f3;
+      border-left: 4px solid var(--rose-primary);
+      padding: 14px 18px;
+      border-radius: 0 16px 16px 0;
+      margin: 18px 0;
+      font-style: italic;
+      color: var(--rose-deep);
+      font-size: 1.18rem;
+      font-weight: 600;
+      line-height: 1.7;
+    }
+
+    /* CUTE WATER STRAW BOTTLE COMPONENT */
+    .water-bottle-section {
+      background: linear-gradient(135deg, #eef9ff 0%, #fff0f5 100%);
+      border: 2px solid #cce9ff;
+      border-radius: 32px;
+      padding: 30px 24px;
+      margin-bottom: 36px;
+      box-shadow: var(--shadow-card);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .water-flex {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .bottle-art-box {
+      flex: 0 0 130px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      margin: 0 auto;
+    }
+
+    .water-bottle-svg {
+      width: 110px;
+      height: 170px;
+      filter: drop-shadow(0 8px 16px rgba(0, 150, 255, 0.18));
+      animation: bottle-float 3.5s ease-in-out infinite alternate;
+    }
+
+    .water-content {
+      flex: 1 1 280px;
+    }
+
+    .water-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #d8f3dc;
+      color: #1b4332;
+      padding: 5px 14px;
+      border-radius: 16px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .water-title {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #0f4c5c;
+      margin-bottom: 8px;
+    }
+
+    .water-desc {
+      font-size: 1.08rem;
+      line-height: 1.65;
+      color: #3d5a80;
+      margin-bottom: 16px;
+    }
+
+    .sip-button {
+      background: linear-gradient(135deg, #4ea8de 0%, #ff85a1 100%);
+      color: #fff;
+      border: none;
+      padding: 12px 26px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 1.08rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 6px 18px rgba(78, 168, 222, 0.35);
+      transition: all 0.25s ease;
+      font-family: 'Mukta', sans-serif;
+    }
+
+    .sip-button:hover {
+      transform: translateY(-2px) scale(1.03);
+    }
+
+    .hydration-status {
+      margin-top: 12px;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #e63946;
+      min-height: 24px;
+    }
+
+    /* SECTION HEADINGS */
+    .section-head {
+      text-align: center;
+      margin: 40px 0 24px;
+    }
+
+    .section-subtitle {
+      font-family: 'Caveat', cursive;
+      font-size: 1.9rem;
+      color: var(--rose-primary);
+    }
+
+    .section-title {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--rose-deep);
+      line-height: 1.3;
+    }
+
+    /* ALL 13 MEMORIES PHOTO GALLERY */
+    .memories-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+      gap: 24px;
+      margin-bottom: 40px;
+    }
+
+    .polaroid-card {
+      background: #ffffff;
+      border-radius: 22px;
+      padding: 16px 16px 22px;
+      box-shadow: var(--shadow-card);
+      border: 1px solid #ffe5ec;
+      transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .polaroid-card:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 22px 45px rgba(255, 77, 109, 0.22);
+      border-color: #ffccd5;
+    }
+
+    .polaroid-img-wrapper {
+      position: relative;
+      width: 100%;
+      height: 310px;
+      border-radius: 16px;
+      overflow: hidden;
+      background: #ffeef2;
+    }
+
+    .polaroid-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 25%;
+      transition: transform 0.6s ease;
+      display: block;
+    }
+
+    .polaroid-card:hover .polaroid-img {
+      transform: scale(1.06);
+    }
+
+    .photo-number-badge {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(6px);
+      padding: 4px 12px;
+      border-radius: 14px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--rose-dark);
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+
+    .polaroid-caption {
+      margin-top: 14px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      justify-content: space-between;
+    }
+
+    .polaroid-quote {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--rose-deep);
+      line-height: 1.35;
+      margin-bottom: 6px;
+    }
+
+    .polaroid-sub {
+      font-size: 0.96rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+
+    .zoom-hint {
+      margin-top: 10px;
+      font-size: 0.8rem;
+      color: var(--rose-primary);
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+    }
+
+    /* SURPRISES: CLICKABLE ENVELOPES */
+    .surprises-container {
+      margin: 36px 0;
+    }
+
+    .surprise-card {
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 22px 24px;
+      margin-bottom: 16px;
+      border: 2px solid #ffd6df;
+      box-shadow: 0 8px 24px rgba(255, 77, 109, 0.08);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .surprise-card:hover {
+      border-color: var(--rose-primary);
+      box-shadow: 0 12px 30px rgba(255, 77, 109, 0.16);
+    }
+
+    .surprise-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .surprise-top-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .surprise-icon {
+      font-size: 1.8rem;
+    }
+
+    .surprise-question {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--rose-deep);
+    }
+
+    .surprise-toggle-btn {
+      color: var(--rose-primary);
+      font-size: 1.4rem;
+      transition: transform 0.3s ease;
+    }
+
+    .surprise-answer {
+      display: none;
+      margin-top: 16px;
+      padding-top: 14px;
+      border-top: 1px dashed #ffccd5;
+      font-size: 1.12rem;
+      line-height: 1.75;
+      color: #55333e;
+      animation: fadeIn 0.4s ease-out;
+    }
+
+    .surprise-card.open .surprise-answer {
+      display: block;
+    }
+
+    .surprise-card.open .surprise-toggle-btn {
+      transform: rotate(180deg);
+    }
+
+    /* HELLO KITTY CORNER & SWEET COMPLIMENTS */
+    .kitty-corner {
+      background: linear-gradient(135deg, #fff2f5 0%, #ffdde5 100%);
+      border: 3px solid #ffb3c1;
+      border-radius: 32px;
+      padding: 32px 24px;
+      text-align: center;
+      margin-bottom: 38px;
+      box-shadow: var(--shadow-card);
+      position: relative;
+    }
+
+    .kitty-corner-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .kitty-quote-box {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 22px 24px;
+      margin: 18px auto;
+      max-width: 580px;
+      box-shadow: 0 8px 22px rgba(255, 117, 143, 0.16);
+      border: 2px dashed #ff85a1;
+      font-size: 1.18rem;
+      line-height: 1.75;
+      color: var(--rose-deep);
+      font-weight: 600;
+      min-height: 90px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .kitty-gen-btn {
+      background: #ff85a1;
+      color: #fff;
+      border: none;
+      padding: 12px 30px;
+      border-radius: 50px;
+      font-size: 1.08rem;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 6px 18px rgba(255, 133, 161, 0.4);
+      transition: all 0.25s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Mukta', sans-serif;
+    }
+
+    .kitty-gen-btn:hover {
+      background: #ff6b8b;
+      transform: scale(1.04);
+    }
+
+    /* THE DECISION / FORGIVE ME CHALLENGE */
+    .decision-box {
+      background: linear-gradient(135deg, #ffffff 0%, #fff0f3 100%);
+      border-radius: 36px;
+      padding: 42px 24px;
+      text-align: center;
+      box-shadow: 0 20px 60px rgba(201, 24, 74, 0.2);
+      border: 3px solid #ffccd5;
+      margin-bottom: 40px;
+      position: relative;
+    }
+
+    .decision-title {
+      font-size: 2.1rem;
+      font-weight: 800;
+      color: var(--rose-deep);
+      margin-bottom: 12px;
+      line-height: 1.3;
+    }
+
+    .decision-sub {
+      font-size: 1.22rem;
+      color: var(--text-muted);
+      margin-bottom: 28px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.7;
+    }
+
+    .btn-action-group {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      position: relative;
+      min-height: 85px;
+      flex-wrap: wrap;
+    }
+
+    .btn-yes {
+      background: linear-gradient(135deg, #2ec4b6 0%, #208b81 100%);
+      color: #ffffff;
+      border: none;
+      padding: 18px 42px;
+      font-size: 1.35rem;
+      font-weight: 800;
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow: 0 10px 25px rgba(46, 196, 182, 0.4);
+      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'Mukta', sans-serif;
+      z-index: 5;
+    }
+
+    .btn-yes:hover {
+      transform: scale(1.08);
+      box-shadow: 0 14px 35px rgba(46, 196, 182, 0.5);
+    }
+
+    .btn-no {
+      background: #f1f2f6;
+      color: #747d8c;
+      border: 2px solid #ced6e0;
+      padding: 16px 32px;
+      font-size: 1.15rem;
+      font-weight: 700;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      font-family: 'Mukta', sans-serif;
+      user-select: none;
+      z-index: 4;
+    }
+
+    /* PHOTO MODAL FOR FULL PREVIEW */
+    #photo-modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.88);
+      backdrop-filter: blur(10px);
+      z-index: 2500;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .modal-frame {
+      background: #ffffff;
+      border-radius: 28px;
+      max-width: 500px;
+      width: 100%;
+      padding: 16px 16px 24px;
+      position: relative;
+      box-shadow: 0 25px 60px rgba(0,0,0,0.5);
+      animation: popIn 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      text-align: center;
+    }
+
+    .modal-close-btn {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      background: rgba(255, 255, 255, 0.9);
+      border: none;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      font-size: 1.2rem;
+      color: var(--rose-primary);
+      cursor: pointer;
+      z-index: 10;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .modal-img-container {
+      width: 100%;
+      max-height: 60vh;
+      border-radius: 18px;
+      overflow: hidden;
+      background: #000;
+      margin-bottom: 14px;
+    }
+
+    .modal-img {
+      width: 100%;
+      height: 100%;
+      max-height: 60vh;
+      object-fit: contain;
+      display: block;
+    }
+
+    .modal-caption-title {
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: var(--rose-deep);
+      margin-bottom: 6px;
+    }
+
+    .modal-caption-text {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* CELEBRATION MODAL */
+    #celebration-modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.75);
+      backdrop-filter: blur(8px);
+      z-index: 3000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .celebration-content {
+      background: #ffffff;
+      border-radius: 36px;
+      padding: 38px 26px;
+      max-width: 480px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 25px 60px rgba(255, 77, 109, 0.4);
+      border: 3px solid #ffccd5;
+      animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      position: relative;
+    }
+
+    .celebration-img-ring {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      margin: 0 auto 16px;
+      border: 4px solid var(--rose-primary);
+      overflow: hidden;
+      box-shadow: 0 8px 25px rgba(255, 77, 109, 0.35);
+    }
+
+    .celebration-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* FOOTER */
+    .footer {
+      text-align: center;
+      margin-top: 40px;
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      line-height: 1.8;
+    }
+
+    .footer-heart {
+      color: var(--rose-primary);
+      display: inline-block;
+      animation: heartbeat 1.5s infinite;
+    }
+
+    /* KEYFRAMES */
+    @keyframes gentle-float {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-10px); }
+    }
+
+    @keyframes gentle-glow {
+      0% { box-shadow: 0 10px 25px rgba(201, 24, 74, 0.25); }
+      100% { box-shadow: 0 16px 40px rgba(255, 77, 109, 0.45); }
+    }
+
+    @keyframes bottle-float {
+      0% { transform: translateY(0) rotate(0deg); }
+      100% { transform: translateY(-8px) rotate(2deg); }
+    }
+
+    @keyframes heartbeat {
+      0%, 100% { transform: scale(1); }
+      25% { transform: scale(1.2); }
+      50% { transform: scale(1.1); }
+      75% { transform: scale(1.25); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes popIn {
+      0% { transform: scale(0.7); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    @media (max-width: 600px) {
+      .hero-title { font-size: 1.9rem; }
+      .hero-nickname { font-size: 2.4rem; }
+      .entry-title { font-size: 1.7rem; }
+      .decision-title { font-size: 1.75rem; }
+      .eternal-promise-banner { font-size: 1.05rem; padding: 14px 18px; }
+      .polaroid-img-wrapper { height: 260px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Petals Canvas -->
+  <canvas id="petals-canvas"></canvas>
+
+  <!-- ENTRY SCREEN: "Come here Mama (vitra aaunu mama)" -->
+  <div id="entry-gate">
+    <div class="entry-card">
+      <div class="entry-avatar-stack">
+        <img src="photos/photo_12_sunlight.jpg" alt="Sushila & Willson" class="entry-avatar-img">
+        <div class="entry-kitty-badge">
+          <!-- Hello Kitty Bow Icon -->
+          <svg viewBox="0 0 100 70" width="24" height="18">
+            <path d="M50 35 C38 18, 15 15, 12 32 C9 50, 32 58, 48 40 Z" fill="#ff4d6d"/>
+            <path d="M50 35 C62 18, 85 15, 88 32 C91 50, 68 58, 52 40 Z" fill="#ff4d6d"/>
+            <circle cx="50" cy="35" r="9" fill="#ffccd5"/>
+          </svg>
+        </div>
+      </div>
+      
+      <div class="entry-tag">For Sushila (Maisaab)</div>
+      <h1 class="entry-title">यता आउनु मामा... ❤️</h1>
+      <div class="entry-subtitle">“Come here Mama (भित्र आउनु मामा)”</div>
+      
+      <p class="entry-nepali-text">
+        मेरी प्यारी मइसाब,<br>
+        तपाईंको लागि हाम्रो सुन्दर सम्झनाहरू सजाएको छु।<br>
+        कृपया भित्र आएर मेरो मनको कुरा सुनिदिनुस् न!
+      </p>
+
+      <button id="unlock-btn" class="entry-btn">
+        <span>भित्र आउनु मामा (Enter) 🌹</span>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- MAIN PAGE CONTENT -->
+  <div class="app-container">
+
+    <!-- Top Navigation / Ambient Music -->
+    <div class="top-bar">
+      <div class="top-badge">
+        <span>🎀</span>
+        <span>Dedicated to Sushila (Maisaab)</span>
+      </div>
+      <div class="top-actions">
+        <button id="music-toggle" class="control-btn">
+          <span id="music-icon">🎵</span>
+          <span id="music-text">Sweet Music: ON</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- HERO CARD -->
+    <div class="hero-card">
+      <div class="hero-couple-showcase">
+        <div class="hero-couple-frame">
+          <img src="photos/photo_6_heart.jpg" alt="Our Heart" class="hero-couple-img">
+          <!-- Kitty Bow on Frame -->
+          <svg class="hero-kitty-corner-bow" viewBox="0 0 100 70">
+            <path d="M50 35 C38 18, 15 15, 12 32 C9 50, 32 58, 48 40 Z" fill="#ff4d6d" stroke="#fff" stroke-width="2"/>
+            <path d="M50 35 C62 18, 85 15, 88 32 C91 50, 68 58, 52 40 Z" fill="#ff4d6d" stroke="#fff" stroke-width="2"/>
+            <circle cx="50" cy="35" r="9" fill="#ffccd5" stroke="#fff" stroke-width="2"/>
+          </svg>
+        </div>
+      </div>
+
+      <h2 class="hero-title">मेरी प्यारी रानी,</h2>
+      <div class="hero-nickname">Maisaab 💕</div>
+
+      <p class="hero-lead-nepali">
+        तपाईं रिसाउँदा मेरो पूरै संसार रोकिएको जस्तो लाग्छ...<br>
+        तपाईंको एउटा सानो मुस्कान नै मेरो हरेक दिनको उज्यालो हो।<br>
+        मलाई थाहा छ म कहिलेकाहीं बदमास बन्छु होला, तर मेरो मुटुको हरेक धड्कनमा केवल तपाईंको मात्र राज छ मामा!
+      </p>
+
+      <div class="eternal-promise-banner">
+        ✨ “मृत्यु पर्यन्त, अन्तिम सास सम्म तपाईंसँगै अझ धेरै सुन्दर यादहरू र सम्झनाहरू बनाउन चाहन्छु।” 🌹
+      </div>
+    </div>
+
+    <!-- HEARTFELT CONVINCING LETTER -->
+    <div class="letter-card">
+      <div class="letter-header">
+        <span class="letter-icon">💌</span>
+        <div>
+          <h3 class="letter-title">मइसाबको नाममा मेरो मनको चिठ्ठी</h3>
+          <span style="font-size:0.92rem; color: var(--rose-primary); font-weight:600;">Dedicated with unconditional love</span>
+        </div>
+      </div>
+      <div class="letter-body">
+        <p>
+          <strong>प्यारी सुशीला (मेरी मइसाब),</strong><br>
+          शब्दहरू कहिलेकाहीं मेरो भावना व्यक्त गर्न कम पर्छन्। तपाईं जब थोरै पनि उदास वा रिसाएको हुनुहुन्छ, मेरो छातीभित्र केही टुटिरहेको आभास हुन्छ। संसारमा मलाई अरु कसैको रिसले फरक पर्दैन, तर तपाईंको मौनताले मलाई एकदमै छटपटी गराउँछ।
+        </p>
+        
+        <div class="highlight-quote">
+          “तपाईं मेरो लागि केवल एउटा मान्छे होइन, मेरो सम्पूर्ण संसार, मेरो घर, र मेरो आत्माको शान्ति हुनुहुन्छ।”
+        </div>
+
+        <p>
+          म वादा गर्छु मइसाब— म तपाईंलाई कहिल्यै एक्लो महसुस हुन दिने छैन। जिन्दगीका जस्तोसुकै आँधीबेहरी आए पनि, तपाईंको हात कहिल्यै छोड्ने छैन। हाम्रो प्रेम यो जुनी मात्र होइन, हाम्रो जीवनको अन्तिम बिन्दुसम्म अझ प्रगाढ, अझ सुन्दर बन्दै जानेछ।
+        </p>
+
+        <p>
+          कृपया यो सानो मनलाई माफ गरिदिनुस् न है? तपाईंको ओठको त्यो मीठो हाँसो मेरो लागि संसारको सबैभन्दा ठूलो उपहार हो मामा! 🌸
+        </p>
+      </div>
+    </div>
+
+    <!-- CUTE WATER STRAW BOTTLE COMPONENT (Her favorite!) -->
+    <div class="water-bottle-section">
+      <div class="water-flex">
+        <div class="bottle-art-box">
+          <!-- Cute Water Straw Bottle SVG with Hello Kitty Details -->
+          <svg class="water-bottle-svg" viewBox="0 0 120 200">
+            <!-- Straw -->
+            <path d="M68 50 L68 18 Q68 10 78 10 L88 10" fill="none" stroke="#ff758f" stroke-width="7" stroke-linecap="round"/>
+            <path d="M68 45 L68 20 Q68 14 76 14 L86 14" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+            <!-- Cap Lid -->
+            <rect x="42" y="48" width="36" height="14" rx="4" fill="#ff85a1" stroke="#c9184a" stroke-width="2"/>
+            <rect x="36" y="60" width="48" height="10" rx="3" fill="#ffccd5" stroke="#c9184a" stroke-width="2"/>
+            <!-- Bottle Body (Transparent Pink Glass) -->
+            <rect x="25" y="70" width="70" height="115" rx="18" fill="rgba(255, 182, 193, 0.45)" stroke="#c9184a" stroke-width="2.5"/>
+            <!-- Water Liquid Inside -->
+            <path id="water-level" d="M27 105 Q45 102 60 106 T93 104 L93 170 Q93 183 75 183 L45 183 Q27 183 27 170 Z" fill="#80ed99" opacity="0.6"/>
+            <!-- Hello Kitty Sticker on Bottle -->
+            <circle cx="60" cy="138" r="14" fill="#ffffff" stroke="#c9184a" stroke-width="1.5"/>
+            <ellipse cx="56" cy="138" rx="1.5" ry="2" fill="#4a2832"/>
+            <ellipse cx="64" cy="138" rx="1.5" ry="2" fill="#4a2832"/>
+            <circle cx="60" cy="141" r="1.5" fill="#f9bc60"/>
+            <circle cx="68" cy="128" r="3.5" fill="#ff4d6d"/>
+            <!-- Measurement ticks -->
+            <line x1="32" y1="88" x2="40" y2="88" stroke="#ff4d6d" stroke-width="2" stroke-linecap="round"/>
+            <line x1="32" y1="108" x2="38" y2="108" stroke="#ff4d6d" stroke-width="2" stroke-linecap="round"/>
+            <line x1="32" y1="128" x2="40" y2="128" stroke="#ff4d6d" stroke-width="2" stroke-linecap="round"/>
+            <line x1="32" y1="148" x2="38" y2="148" stroke="#ff4d6d" stroke-width="2" stroke-linecap="round"/>
+            <!-- Glass Shine Highlight -->
+            <path d="M84 80 L84 165" stroke="rgba(255,255,255,0.7)" stroke-width="4" stroke-linecap="round"/>
+          </svg>
+        </div>
+
+        <div class="water-content">
+          <div class="water-tag">
+            <span>🥤</span>
+            <span>Cute Straw Bottle Reminder</span>
+          </div>
+          <h3 class="water-title">मइसाबको हाइड्रेशन ख्याल (Drink Water, Mama!)</h3>
+          <p class="water-desc">
+            तपाईंलाई यस्तो क्युट स्ट्र-वाला बोतल कति मनपर्छ नि! तपाईं कहिलेकाहीं काममा व्यस्त भएर पानी पिउन भुल्नुहुन्छ। मेरो मइसाब सधैं स्वस्थ र सुन्दर रहनुपर्छ। ल भन्नुस् त, आज पानी पिउनु भयो?
+          </p>
+          <button id="sip-btn" class="sip-button">
+            <span>एक घुट्की पानी पिउनुस् मामा 🧋✨</span>
+          </button>
+          <div id="hydration-status" class="hydration-status"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MEMORIES & ETERNAL PROMISE GALLERY: ALL 13 REAL PHOTOS -->
+    <div class="section-head">
+      <div class="section-subtitle">Our Beautiful Journey & Forever Promises</div>
+      <h3 class="section-title">हाम्रा १३ अनमोल यादहरू र सम्झनाहरू 📸</h3>
+      <p style="color:var(--text-muted); font-size:1.1rem; margin-top:6px; max-width:650px; margin-left:auto; margin-right:auto;">
+        “मृत्यु पर्यन्त सम्म तपाईंसँगै अझ हजारौं यस्ता सुन्दर यादहरू बनाउने मेरो वाचा!” 🌹
+      </p>
+    </div>
+
+    <div class="memories-grid">
+      <!-- 1. Cake Celebration -->
+      <div class="polaroid-card" onclick="openPhotoModal('photos/photo_1_cake.jpg', 'तपाईंको हरेक खुशी, मेरो उत्सव 🎂✨', 'तपाईंको हातमा त्यो केक, अनि मेरो अनुहारमा तपाईंलाई हेरेर आएको त्यो सन्तोष... तपाईं खुसी हुँदा मेरो संसार पूरा हुन्छ मामा।')">
+        <div class="polaroid-img-wrapper">
+          <img class="polaroid-img" src="photos/photo_1_cake.jpg" alt="Cake celebration">
+          <span class="photo-number-badge">🎂 Memory #1</span>
+        </div>
+        <div class="polaroid-caption">
+          <div class="polaroid-quote">तपाईंको हरेक खुशी, मेरो उत्सव 🎂✨</div>
+          <div class="polaroid-sub">तपाईं खुसी हुँदा मेरो संसार पूरा हुन्छ मामा।</div>
+          <div class="zoom-hint">🔍 ट्याप गरी ठूलो हेर्नुहोस्</div>
+        </div>
+      </div>
+
+      <!-- 2. Travel Together -->
+      <div class="polaroid-card" onclick="openPhotoModal('photos/photo_2_travel.jpg', 'सँगै यात्रा, सँगै जिन्दगी 🚗❤️', 'गाडीको त्यो सानो सिटमा तपाईंको काँधमा काँध मिलाएर हिँड्दा, संसारको हरेक गन्तव्य सजिलो लाग्छ मइसाब।')">
+        <div class="polaroid-img-wrapper">
+          <img class="polaroid-img" src="photos/photo_2_travel.jpg" alt="Traveling together">
+          <span class="photo-number-badge">🚗 Memory #2</span>
+        </div>
+        <div class="polaroid-caption">
+          <div class="polaroid-quote">सँगै यात्रा, सँगै जिन्दगी 🚗❤️</div>
+          <div class="polaroid-sub">तपाईंसँग हुँदा संसारको हरेक यात्रा रमाइलो लाग्छ।</div>
+          <div class="zoom-hint">🔍 ट्याप गरी ठूलो हेर्नुहोस्</div>
+        </div>
+      </div>
+
+      <!-- 3. Silly Faces & Snacks -->
+      <div class="polaroid-card" onclick="openPhotoModal('photos/photo_3_silly.jpg', 'हाम्रा पागलपन र बदमासीहरू 😜🍟', 'तपाईंसँग मात्र म पूरै बच्चा बन्न सक्छु। यी साना-साना हाँसो र जिस्काइहरू मेरो जिन्दगीका सबैभन्दा ठूला सम्पत्ति हुन्।')">
+        <div class="polaroid-img-wrapper">
+          <img class="polaroid-img" src="photos/photo_3_silly.jpg" alt="Silly snacks moment">
+          <span class="photo-number-badge">🍟 Memory #3</span>
+        </div>
+        <div class="polaroid-caption">
+          <div class="polaroid-quote">हाम्रा पागलपन र बदमासीहरू 😜🍟</div>
+          <div class="polaroid-sub">तपाईंसँग मात्र म पूरै बच्चा बनेर हाँस्न सक्छु।</div>
+          <div class="zoom-hint">🔍 ट्याप गरी ठूलो हेर्नुहोस्</div>
+        </div>
+      </div>
+
+      <!-- 4. Pout / Cute Face -->
+      <div class="polaroid-card" onclick="openPhotoModal('photos/photo_4_pout.jpg', 'त्यो क्युट रिसाइ र जिस्क्याइ 😚💕', 'मुख फुलाएर रिसाउँदा पनि संसारकै सबैभन्दा क्युट देखिने मेरी मइसाब! नरिसाउनु न है मामा, माया लाग्छ के!')">
+        <div class="polaroid-img-wrapper">
+          <img class="polaroid-img" src="photos/photo_4_pout.jpg" alt="Cute pout outdoors">
+          <span class="photo-number-badge">😚 Memory #4</span>
+        </div>
+        <div class="polaroid-caption">
+          <div class="polaroid-quote">त्यो क्युट रिसाइ र जिस्क्याइ 😚💕</div>
+          <div class="polaroid-sub">रिसाउँदा पनि संसारकै क्युट देखिने मेरी मइसाब!</div>
+          <div class="zoom-hint">🔍 ट्याप गरी ठूलो हेर्नुहोस्</div>
+        </div>
+      </div>
+
+      <!-- 5. Traditional Dress & Ornaments -->
+      <div class="polaroid-card" onclick="openPhotoModal('photos/photo_5_traditional.jpg', 'मेरी परम्परागत राजकुमारी 👑🌸', 'नाकको त्यो फुली र परम्परागत पहिरनमा... साँचै भनूँ भने, तपाईं मेरो आँखाको लागि मात्र होइन, मेरो आत्माको लागि पनि सबैभन्दा सुन्दरी हुनुहुन्छ।')">
+        <div class="polaroid-img-wrapper">
+          <img class="polaroid-img" src="photos/photo_5_traditional.jpg" alt="Traditional beauty">
+          <span class="photo-number-badge">👑 Memory #5</span>
+        </div>
+        <div class="polaroid-caption">
+          <div class="polaroid-quote">मेरी परम्परागत राजकुमारी 👑🌸</div>
+          <div class="polaroid-sub">तपाईं मेरो आँखा र आत्मा दुवैको रानी हुनुहुन्छ।</div>
+          <div class="zoom-hint">🔍 ट्याप गरी ठूलो हेर्नुहोस्</div>
+        </div>
+      </div>
+
+      <!-- 6. Golden Hour Hand Heart -->
+      <div class="polaroid-card" onclick="openPhotoModal('photos/photo_6_heart.jpg', 'दुई मुटु, एउटै माया (Our Heart) 🫶✨', 'घामको मधुरो किरणमा दुई हातले बनाएको यो मुटु... हाम्रो यो प्रेम मृत्यु पर्यन्त कहिल्यै टुट्ने छैन।')">
+        <div class="polaroid-img-wrapper">
+          <img class="polaroid-img" src="photos/photo_6_heart.jpg" alt="Hand heart sunset">
+          <span class="photo-number-badge">🫶 Memory #6</span>
+        </div>
+        <div class="polaroid-caption">
+          <div class="polaroid-quote">दुई मुटु, एउटै माया 🫶✨</div>
+          <div class="polaroid-sub">हाम्रो यो प्रेम मृत्यु पर्यन्त कहिल्यै टुट्ने छैन।</div>
+          <div class="zoom-hint">🔍 ट्याप गरी ठूलो हेर्नुहोस्</div>
+        </div>
+      </div>
+
+      <!-- 7. Cozy Hoodie Selfie -->
+      <div class="polaroid-card" onclick="openPhotoModal('photos/photo_7_hoodie.jpg', 'न्यानोपन र आत्मीयता 🧥🍂', 'हुडी लगाएर टाँसिएर खिचेको यो तस्बिर... तपाईंको नजिक हुँदा मात्र मेरो मन शान्त हुन्छ।')">
+        <div class="polaroid-img-wrapper">
+          <img class="polaroid-img" src="photos/photo_7_hoodie.jpg" alt="Cozy hoodie moments">
+          <span class="photo-number-badge">🧥 Memory #7</span>
+        </div>
+        <div class="polaroid-caption">
+          <div class="polaroid-quote">न्यानोपन र आत्मीयता 🧥🍂</div>
+          <div class="polaroid-sub">तपाईंको नजिक हुँदा मात्र मेरो मन शान्त हुन्छ।</div>
+          <div class="zoom-hint">🔍 ट्याप गरी ठूलो हेर्नुहोस्</div>
+        </div>
+      </div>
+
+      <!-- 8. Cheek Kiss in the Forest -->
+      <div class="polaroid-card" onclick="openPhotoModal('photos/photo_8_kiss_nature.jpg', 'प्रकृतिको काखमा मायालु चुम्बन 🌲💋', 'रुखहरूको छहारीमा गालामा दिएको त्यो माया... यो पल मेरो जीवनको सबैभन्दा मीठो सम्झना हो मामा।')">
+        <div class="polaroid-img-wrapper">
+          <img class="polaroid-img" src="photos/photo_8_kiss_nature.jpg" alt="Cheek kiss nature">
+          <span class="photo-number-badge">💋 Memory #8</span>
+        </div>
+        <div class="polaroid-caption">
+          <div class="polaroid-quote">प्रकृतिको काखमा मायालु चुम्बन 🌲💋</div>
+          <div class="polaroid-sub">यो पल मेरो जीवनको सबैभन्दा मीठो सम्झना हो मामा।</div>
+          <div class="zoom-hint">🔍 ट्याप गरी ठूलो हेर्नुहोस्</div>
+        </div>
+      </div>
+
+      <!-- 9. Sweet Cheek Kiss Hills -->
+      <div class="polaroid-card" onclick="openPhotoModal('photos/photo_9_kiss_cheek.jpg', 'पहाडको हावा अनि तपाईंको माया 🌿🥰', 'तपाईंले मायाले गालामा छुँदा लाग्छ, भगवानले मलाई संसारकै सबैभन्दा ठूलो वरदान दिनुभएको छ।')">
+        <div class="polaroid-img-wrapper">
+          <img class="polaroid-img" src="photos/photo_9_kiss_cheek.jpg" alt="Kiss on cheek hills">
+          <span class="photo-number-badge">🌿 Memory #9</span>
+        </div>
+        <div class="polaroid-caption">
+          <div class="polaroid-quote">पहाडको हावा अनि तपाईंको माया 🌿🥰</div>
+          <div class="polaroid-sub">भगवानले मलाई संसारकै सबैभन्दा ठूलो वरदान दिनुभयो।</div>
+          <div class="zoom-hint">🔍 ट्याप गरी ठूलो हेर्नुहोस्</div>
+        </div>
+      </div>
+
+      <!-- 10. Tika Blessing & Smiles -->
+      <div class="polaroid-card" onclick="openPhotoModal('photos/photo_10_tika_blessing.jpg', 'चाडपर्व र आशिर्वादको रंग 🔴✨', 'निधारमा रातो अक्षता अनि तपाईंको त्यो सुन्दर हाँसो... हरेक चाडपर्व तपाईंसँगै जुनी जुनी मनाउन पाउँ।')">
+        <div class="polaroid-img-wrapper">
+          <img class="polaroid-img" src="photos/photo_10_tika_blessing.jpg" alt="Tika festival blessings">
+          <span class="photo-number-badge">🔴 Memory #10</span>
+        </div>
+        <div class="polaroid-caption">
+          <div class="polaroid-quote">चाडपर्व र आशिर्वादको रंग 🔴✨</div>
+          <div class="polaroid-sub">हरेक चाडपर्व तपाईंसँगै जुनी जुनी मनाउन पाउँ।</div>
+          <div class="zoom-hint">🔍 ट्याप गरी ठूलो हेर्नुहोस्</div>
+        </div>
+      </div>
+
+      <!-- 11. Strolling by the Bakery -->
+      <div class="polaroid-card" onclick="openPhotoModal('photos/photo_11_bakery.jpg', 'मीठो दिन, अझ मीठो साथ 🍰☕', 'सपिङ र घुमघाममा तपाईंको छेउमा उभिन पाउनु नै मेरो गर्व हो। तपाईं मेरो सान हुनुहुन्छ मइसाब।')">
+        <div class="polaroid-img-wrapper">
+          <img class="polaroid-img" src="photos/photo_11_bakery.jpg" alt="Bakery stroll together">
+          <span class="photo-number-badge">☕ Memory #11</span>
+        </div>
+        <div class="polaroid-caption">
+          <div class="polaroid-quote">मीठो दिन, अझ मीठो साथ 🍰☕</div>
+          <div class="polaroid-sub">तपाईंको छेउमा उभिन पाउनु नै मेरो गर्व हो।</div>
+          <div class="zoom-hint">🔍 ट्याप गरी ठूलो हेर्नुहोस्</div>
+        </div>
+      </div>
+
+      <!-- 12. Rooftop Sunlight -->
+      <div class="polaroid-card" onclick="openPhotoModal('photos/photo_12_sunlight.jpg', 'घामको न्यानो किरण र तपाईं ☀️💕', 'छतमा घाम ताप्दै खिचेको त्यो निश्चल पल... तपाईं मेरो अँध्यारो जीवनको सधैंको घाम हुनुहुन्छ।')">
+        <div class="polaroid-img-wrapper">
+          <img class="polaroid-img" src="photos/photo_12_sunlight.jpg" alt="Rooftop sunlight">
+          <span class="photo-number-badge">☀️ Memory #12</span>
+        </div>
+        <div class="polaroid-caption">
+          <div class="polaroid-quote">घामको न्यानो किरण र तपाईं ☀️💕</div>
+          <div class="polaroid-sub">तपाईं मेरो अँध्यारो जीवनको सधैंको घाम हुनुहुन्छ।</div>
+          <div class="zoom-hint">🔍 ट्याप गरी ठूलो हेर्नुहोस्</div>
+        </div>
+      </div>
+
+      <!-- 13. Blue Sky Peace Sign -->
+      <div class="polaroid-card" onclick="openPhotoModal('photos/photo_13_peace_sky.jpg', 'सधैं विजयी, सधैं सँगै ✌️🕊️', 'नीलो आकाशमुनि दुवैको यो मुस्कान... जस्तोसुकै परिस्थिति आए पनि हाम्रो प्रेम सधैं यसरी नै हाँसिरहनेछ।')">
+        <div class="polaroid-img-wrapper">
+          <img class="polaroid-img" src="photos/photo_13_peace_sky.jpg" alt="Peace sign blue sky">
+          <span class="photo-number-badge">✌️ Memory #13</span>
+        </div>
+        <div class="polaroid-caption">
+          <div class="polaroid-quote">सधैं विजयी, सधैं सँगै ✌️🕊️</div>
+          <div class="polaroid-sub">नीलो आकाशमुनि हाम्रो प्रेम सधैं अमर रहनेछ।</div>
+          <div class="zoom-hint">🔍 ट्याप गरी ठूलो हेर्नुहोस्</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SURPRISES & SECRET LOVE NOTES -->
+    <div class="surprises-container">
+      <div class="section-head" style="margin-top:20px;">
+        <div class="section-subtitle">Touch to open secret envelopes</div>
+        <h3 class="section-title">तपाईंको लागि ३ गोप्य सरप्राइजहरू 💌</h3>
+      </div>
+
+      <div class="surprise-card" onclick="toggleSurprise(this)">
+        <div class="surprise-top">
+          <div class="surprise-top-left">
+            <span class="surprise-icon">🌹</span>
+            <span class="surprise-question">सरप्राइज १: म किन मइसाबलाई यति धेरै माया गर्छु?</span>
+          </div>
+          <span class="surprise-toggle-btn">▼</span>
+        </div>
+        <div class="surprise-answer">
+          किनकि तपाईं बाहिरबाट जति सुन्दर हुनुहुन्छ, त्योभन्दा हजार गुणा पवित्र र दयालु तपाईंको मन छ। तपाईंको साना साना कुरामा ख्याल राख्ने बानी, त्यो मायालु रिसाउने शैली, र मलाई सधैं राम्रो मान्छे बनाउने प्रेरणा तपाईं नै हुनुहुन्छ। I love you so much Sushila!
+        </div>
+      </div>
+
+      <div class="surprise-card" onclick="toggleSurprise(this)">
+        <div class="surprise-top">
+          <div class="surprise-top-left">
+            <span class="surprise-icon">🎀</span>
+            <span class="surprise-question">सरप्राइज २: मृत्यु पर्यन्तको मेरो एउटै प्रतिज्ञा...</span>
+          </div>
+          <span class="surprise-toggle-btn">▼</span>
+        </div>
+        <div class="surprise-answer">
+          समय बित्दै जाला, हाम्रो कपाल फुल्ला, अनुहारमा चाउरी पर्ला... तर तपाईं मेरो लागि सधैं त्यही पहिलो दिन देखेकी सबैभन्दा सुन्दरी "मइसाब" नै रहनुहुनेछ। मृत्युको अन्तिम क्षणसम्म पनि तपाईंको हात मेरो हातमा रहोस्, भगवानसँग मेरो यही एउटा मात्र माग छ।
+        </div>
+      </div>
+
+      <div class="surprise-card" onclick="toggleSurprise(this)">
+        <div class="surprise-top">
+          <div class="surprise-top-left">
+            <span class="surprise-icon">🐱</span>
+            <span class="surprise-question">सरप्राइज ३: मामा रिसाउँदा मेरो हालत के हुन्छ?</span>
+          </div>
+          <span class="surprise-toggle-btn">▼</span>
+        </div>
+        <div class="surprise-answer">
+          मेरो पूरै दिमाग शून्य हुन्छ, कुनै काममा मन लाग्दैन, खानाको स्वाद हराउँछ! जबसम्म मइसाबले मलाई हेरेर मुसुक्क हाँस्नुहुन्न, तबसम्म यो संसार रङ्गीन बन्दै बन्दैन। त्यसैले प्लिज, अब नरिसाउनु न है मामा!
+        </div>
+      </div>
+    </div>
+
+    <!-- HELLO KITTY SWEET CORNER -->
+    <div class="kitty-corner">
+      <div class="kitty-corner-header">
+        <!-- Hello Kitty Head SVG -->
+        <svg viewBox="0 0 100 100" width="55" height="55">
+          <polygon points="18,30 26,8 44,22" fill="#ffffff" stroke="#4a2832" stroke-width="3"/>
+          <polygon points="82,30 74,8 56,22" fill="#ffffff" stroke="#4a2832" stroke-width="3"/>
+          <ellipse cx="50" cy="55" rx="42" ry="34" fill="#ffffff" stroke="#4a2832" stroke-width="3"/>
+          <ellipse cx="32" cy="56" rx="3.5" ry="5.5" fill="#4a2832"/>
+          <ellipse cx="68" cy="56" rx="3.5" ry="5.5" fill="#4a2832"/>
+          <ellipse cx="50" cy="64" rx="4.5" ry="3.5" fill="#f9bc60" stroke="#4a2832" stroke-width="1.5"/>
+          <line x1="8" y1="52" x2="22" y2="54" stroke="#4a2832" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="6" y1="62" x2="21" y2="62" stroke="#4a2832" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="78" y1="54" x2="92" y2="52" stroke="#4a2832" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="79" y1="62" x2="94" y2="62" stroke="#4a2832" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M74 22 C67 12 55 18 56 26 C57 34 70 34 74 27 Z" fill="#ff4d6d" stroke="#4a2832" stroke-width="2"/>
+          <path d="M74 22 C81 12 93 18 92 26 C91 34 78 34 74 27 Z" fill="#ff4d6d" stroke="#4a2832" stroke-width="2"/>
+          <circle cx="74" cy="24" r="5" fill="#ff85a1" stroke="#4a2832" stroke-width="2"/>
+        </svg>
+        <h3 style="font-size: 1.65rem; font-weight:800; color:var(--rose-deep);">Hello Kitty's Sweet Whispers 🎀</h3>
+      </div>
+      <p style="color:var(--text-muted); font-size:1.08rem;">
+        Hello Kitty ले मइसाबको लागि एउटा मीठो सन्देश पठाएकी छिन्:
+      </p>
+
+      <div id="kitty-quote-display" class="kitty-quote-box">
+        “सुशीला मामा, तपाईं हाँस्दा सबैभन्दा क्युट देखिनुहुन्छ! प्लिज उहाँलाई माफ गरिदिनुस् न!” 🐱💖
+      </div>
+
+      <button id="kitty-btn" class="kitty-gen-btn" onclick="generateKittyCompliment()">
+        <span>अर्को क्युट सन्देश हेर्नुहोस् 🎀✨</span>
+      </button>
+    </div>
+
+    <!-- THE CONVINCING DECISION / SMILE CHALLENGE -->
+    <div class="decision-box">
+      <h3 class="decision-title">मइसाब, के मलाई माफ गरेर मुसुक्क हाँसिदिनुहुन्छ? 🥺❤️</h3>
+      <p class="decision-sub">
+        म हजुरलाई संसारकै सबैभन्दा धेरै माया गर्छु मामा। हजुर बिना मेरो जिन्दगी अधुरो छ।<br>
+        के हजुर मेरो हात सधैंको लागि समात्न तयार हुनुहुन्छ?
+      </p>
+
+      <div class="btn-action-group" id="decision-group">
+        <button id="yes-btn" class="btn-yes" onclick="celebrateLove()">
+          <span>हजुर, माफ गरें मामा! ❤️</span>
+          <span style="font-size:1.5rem;">🥰</span>
+        </button>
+
+        <button id="no-btn" class="btn-no" onmouseover="dodgeNoButton()" onclick="dodgeNoButton()">
+          <span>नाइँ, गर्दिनँ 😤</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <p>Made with all my heart & soul for <strong>Sushila (Maisaab)</strong> <span class="footer-heart">❤️</span></p>
+      <p style="font-size:0.98rem; color:var(--rose-primary);">“मृत्यु पर्यन्त, अन्तिम सास सम्म तपाईंसँगै अझ धेरै सुन्दर यादहरू बनाउनेछु।”</p>
+    </footer>
+
+  </div>
+
+  <!-- PHOTO MODAL ZOOM -->
+  <div id="photo-modal" onclick="closePhotoModal(event)">
+    <div class="modal-frame" onclick="event.stopPropagation()">
+      <button class="modal-close-btn" onclick="closePhotoModal()">✕</button>
+      <div class="modal-img-container">
+        <img id="modal-img-src" class="modal-img" src="" alt="Memory preview">
+      </div>
+      <h4 id="modal-caption-title" class="modal-caption-title"></h4>
+      <p id="modal-caption-text" class="modal-caption-text"></p>
+    </div>
+  </div>
+
+  <!-- CELEBRATION / VICTORY MODAL -->
+  <div id="celebration-modal">
+    <div class="celebration-content">
+      <button class="modal-close-btn" onclick="closeCelebration()">✕</button>
+      <div class="celebration-img-ring">
+        <img src="photos/photo_6_heart.jpg" alt="Heart Love" class="celebration-img">
+      </div>
+      <h2 style="font-size: 2.1rem; color: var(--rose-deep); font-weight: 800; margin-bottom: 6px;">मइसाब, I Love You!</h2>
+      <div style="font-family:'Great Vibes', cursive; font-size:2.4rem; color: var(--rose-primary); margin-bottom:12px;">
+        You made me the happiest person!
+      </div>
+      <p style="font-size: 1.15rem; line-height: 1.8; color: #4a2832; margin-bottom: 22px;">
+        धन्यवाद मेरी प्यारी सुशीला (मामा)!<br>
+        तपाईंको यो एउटा मुस्कानले मेरो संसार फेरि उज्यालो बनाइदियो।<br>
+        मृत्यु पर्यन्त, अन्तिम साससम्म तपाईंको हरेक सुख-दुःखमा म यसरी नै साथ रहनेछु। 
+      </p>
+      <button class="entry-btn" onclick="closeCelebration()" style="padding:12px 32px; font-size:1.1rem;">
+        Forever & Always Together 💍💕
+      </button>
+    </div>
+  </div>
+
+  <script>
+    /* =========================================================
+       1. WEB AUDIO ROMANTIC MUSIC SYNTHESIZER
+       ========================================================= */
+    let audioCtx = null;
+    let isPlaying = false;
+    let musicTimer = null;
+    let noteIndex = 0;
+
+    // Sweet romantic melody notes (Hz)
+    const melody = [
+      { note: 261.63, dur: 0.6 }, // C4
+      { note: 329.63, dur: 0.6 }, // E4
+      { note: 392.00, dur: 0.8 }, // G4
+      { note: 523.25, dur: 1.2 }, // C5
+      { note: 493.88, dur: 0.6 }, // B4
+      { note: 392.00, dur: 0.6 }, // G4
+      { note: 329.63, dur: 0.8 }, // E4
+      { note: 440.00, dur: 1.2 }, // A4
+      { note: 392.00, dur: 0.6 }, // G4
+      { note: 349.23, dur: 0.6 }, // F4
+      { note: 329.63, dur: 0.8 }, // E4
+      { note: 293.66, dur: 1.2 }, // D4
+      { note: 329.63, dur: 0.6 }, // E4
+      { note: 392.00, dur: 0.6 }, // G4
+      { note: 523.25, dur: 1.5 }  // C5
+    ];
+
+    function initAudio() {
+      if (!audioCtx) {
+        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      }
+      if (audioCtx.state === 'suspended') {
+        audioCtx.resume();
+      }
+    }
+
+    function playTone(freq, duration) {
+      if (!audioCtx || !isPlaying) return;
+      try {
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+
+        gain.gain.setValueAtTime(0.001, audioCtx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.12, audioCtx.currentTime + 0.08);
+        gain.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + duration);
+
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+
+        osc.start();
+        osc.stop(audioCtx.currentTime + duration);
+      } catch (e) {
+        console.error(e);
+      }
+    }
+
+    function playNextMelodyNote() {
+      if (!isPlaying) return;
+      const current = melody[noteIndex % melody.length];
+      playTone(current.note, current.dur);
+      noteIndex++;
+      musicTimer = setTimeout(playNextMelodyNote, (current.dur + 0.3) * 1000);
+    }
+
+    function startMusic() {
+      initAudio();
+      isPlaying = true;
+      document.getElementById('music-icon').textContent = '🎶';
+      document.getElementById('music-text').textContent = 'Sweet Music: ON';
+      playNextMelodyNote();
+    }
+
+    function stopMusic() {
+      isPlaying = false;
+      clearTimeout(musicTimer);
+      document.getElementById('music-icon').textContent = '🔇';
+      document.getElementById('music-text').textContent = 'Sweet Music: PAUSED';
+    }
+
+    document.getElementById('music-toggle').addEventListener('click', () => {
+      if (isPlaying) {
+        stopMusic();
+      } else {
+        startMusic();
+      }
+    });
+
+    /* =========================================================
+       2. ENTRY GATE UNLOCK
+       ========================================================= */
+    const entryGate = document.getElementById('entry-gate');
+    const unlockBtn = document.getElementById('unlock-btn');
+
+    unlockBtn.addEventListener('click', () => {
+      entryGate.classList.add('unlocked');
+      startMusic();
+      spawnConfettiHeart(window.innerWidth / 2, window.innerHeight / 2, 45);
+    });
+
+    /* =========================================================
+       3. FALLING ROSE PETALS ANIMATION
+       ========================================================= */
+    const canvas = document.getElementById('petals-canvas');
+    const ctx = canvas.getContext('2d');
+    let width = canvas.width = window.innerWidth;
+    let height = canvas.height = window.innerHeight;
+
+    window.addEventListener('resize', () => {
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
+    });
+
+    const petals = [];
+    const petalCount = 35;
+
+    class Petal {
+      constructor() {
+        this.reset();
+      }
+      reset() {
+        this.x = Math.random() * width;
+        this.y = -20 - Math.random() * 50;
+        this.size = 12 + Math.random() * 14;
+        this.speedY = 1 + Math.random() * 1.8;
+        this.speedX = Math.sin(Math.random() * Math.PI) * 1.5;
+        this.rotation = Math.random() * 360;
+        this.rotationSpeed = (Math.random() - 0.5) * 2;
+        this.opacity = 0.5 + Math.random() * 0.45;
+        this.color = Math.random() > 0.4 ? '#ff4d6d' : (Math.random() > 0.5 ? '#ff758f' : '#c9184a');
+      }
+      update() {
+        this.y += this.speedY;
+        this.x += Math.sin(this.y * 0.01) + this.speedX * 0.5;
+        this.rotation += this.rotationSpeed;
+        if (this.y > height + 20) {
+          this.reset();
+        }
+      }
+      draw() {
+        ctx.save();
+        ctx.translate(this.x, this.y);
+        ctx.rotate((this.rotation * Math.PI) / 180);
+        ctx.fillStyle = this.color;
+        ctx.globalAlpha = this.opacity;
+        ctx.beginPath();
+        ctx.moveTo(0, 0);
+        ctx.quadraticCurveTo(this.size / 2, -this.size / 2, this.size, 0);
+        ctx.quadraticCurveTo(this.size / 2, this.size, 0, 0);
+        ctx.fill();
+        ctx.restore();
+      }
+    }
+
+    for (let i = 0; i < petalCount; i++) {
+      const p = new Petal();
+      p.y = Math.random() * height;
+      petals.push(p);
+    }
+
+    function animatePetals() {
+      ctx.clearRect(0, 0, width, height);
+      petals.forEach(p => {
+        p.update();
+        p.draw();
+      });
+      requestAnimationFrame(animatePetals);
+    }
+    animatePetals();
+
+    /* =========================================================
+       4. CUTE WATER STRAW BOTTLE INTERACTION
+       ========================================================= */
+    let sipsTaken = 0;
+    const sipQuotes = [
+      "सबास मेरी रानी! शरीर स्वस्थ हुनुपर्छ है! 💧✨",
+      "अर्को घुट्की! पानीले तपाईंको छाला अझ चम्किलो बनाउँछ, मइसाब! 🌸",
+      "Hydrated Maisaab = Happy Maisaab! Good girl! 🥰🥤",
+      "तपाईंको ख्याल राख्नु नै मेरो सबैभन्दा ठूलो कर्तव्य हो मामा! 💕",
+      "वाउ! कति ज्ञानी हुनुहुन्छ! I love you so much! 👑"
+    ];
+
+    document.getElementById('sip-btn').addEventListener('click', (e) => {
+      sipsTaken++;
+      const quote = sipQuotes[(sipsTaken - 1) % sipQuotes.length];
+      const status = document.getElementById('hydration-status');
+      status.textContent = `(${sipsTaken} Sips) ` + quote;
+      
+      if (audioCtx && isPlaying) {
+        playTone(587.33, 0.2);
+        setTimeout(() => playTone(659.25, 0.3), 150);
+      }
+
+      const rect = e.target.getBoundingClientRect();
+      spawnConfettiHeart(rect.left + rect.width / 2, rect.top, 14);
+    });
+
+    /* =========================================================
+       5. SURPRISE CARDS TOGGLE
+       ========================================================= */
+    function toggleSurprise(card) {
+      card.classList.toggle('open');
+      if (card.classList.contains('open') && audioCtx && isPlaying) {
+        playTone(440, 0.2);
+      }
+    }
+
+    /* =========================================================
+       6. HELLO KITTY COMPLIMENT GENERATOR
+       ========================================================= */
+    const kittyCompliments = [
+      "“सुशीला मामा, तपाईं हाँस्दा सबैभन्दा क्युट देखिनुहुन्छ! प्लिज उहाँलाई माफ गरिदिनुस् न!” 🐱💖",
+      "“Hello Kitty भन्छे: मइसाब रिसाउँदा पूरै बगैँचाका फूलहरू ओइलाउँछन् रे! मुसुक्क हाँसिदिनुस् न!” 🌹🎀",
+      "“तपाईं उहाँको संसारको सबैभन्दा सुन्दर राजकुमारी हुनुहुन्छ मामा! Don't be mad!” ✨👑",
+      "“उहाँले तपाईंलाई मृत्यु पर्यन्त सम्म माया गर्ने बाचा गर्नुभएको छ! यस्तो चोखो माया पाउनु कति भाग्यमानी!” 💍❤️",
+      "“Hello Kitty ले मइसाबको लागि एउटा ठूलो भर्चुअल हग पठाएकी छिन्! 🤗💕”"
+    ];
+    let kittyIndex = 0;
+
+    function generateKittyCompliment() {
+      kittyIndex = (kittyIndex + 1) % kittyCompliments.length;
+      const box = document.getElementById('kitty-quote-display');
+      box.style.opacity = 0;
+      setTimeout(() => {
+        box.textContent = kittyCompliments[kittyIndex];
+        box.style.opacity = 1;
+      }, 200);
+
+      if (audioCtx && isPlaying) {
+        playTone(523.25, 0.15);
+      }
+    }
+
+    /* =========================================================
+       7. PLAYFUL DODGING "NO" BUTTON & "YES" ENLARGEMENT
+       ========================================================= */
+    let dodgeCount = 0;
+    const noBtn = document.getElementById('no-btn');
+    const yesBtn = document.getElementById('yes-btn');
+
+    function dodgeNoButton() {
+      dodgeCount++;
+      if (dodgeCount <= 5) {
+        const maxOffset = 80;
+        const randomX = (Math.random() - 0.5) * maxOffset * 2;
+        const randomY = (Math.random() - 0.5) * maxOffset;
+        
+        noBtn.style.transform = `translate(${randomX}px, ${randomY}px)`;
+        
+        const scale = 1 + (dodgeCount * 0.08);
+        yesBtn.style.transform = `scale(${scale})`;
+
+        const sillyPhrases = [
+          "नाइँ भन्न मिल्दैन मामा! 😜",
+          "प्लिज मानिदिनु न मइसाब! 🥺",
+          "अझै रिसाउने? मुसुक्क हाँस्नु न! 💕",
+          "मेरो मायाले नाइँ भन्न दिंदैन! 🌹",
+          "लौ न, अब त मानिदिनुस्! 🥰"
+        ];
+        noBtn.innerText = sillyPhrases[(dodgeCount - 1) % sillyPhrases.length];
+      } else {
+        noBtn.innerText = "ल माफ गरें! ❤️";
+        noBtn.style.background = "#2ec4b6";
+        noBtn.style.color = "#ffffff";
+        noBtn.style.borderColor = "#208b81";
+        noBtn.style.transform = "none";
+        noBtn.onclick = celebrateLove;
+      }
+    }
+
+    /* =========================================================
+       8. PHOTO MODAL PREVIEW
+       ========================================================= */
+    function openPhotoModal(imgSrc, title, caption) {
+      document.getElementById('modal-img-src').src = imgSrc;
+      document.getElementById('modal-caption-title').textContent = title;
+      document.getElementById('modal-caption-text').textContent = caption;
+      document.getElementById('photo-modal').style.display = 'flex';
+      if (audioCtx && isPlaying) {
+        playTone(493.88, 0.15);
+      }
+    }
+
+    function closePhotoModal() {
+      document.getElementById('photo-modal').style.display = 'none';
+    }
+
+    /* =========================================================
+       9. CELEBRATION MODAL & CONFETTI
+       ========================================================= */
+    function celebrateLove() {
+      document.getElementById('celebration-modal').style.display = 'flex';
+      
+      if (audioCtx) {
+        playTone(523.25, 0.2);
+        setTimeout(() => playTone(659.25, 0.2), 150);
+        setTimeout(() => playTone(783.99, 0.4), 300);
+        setTimeout(() => playTone(1046.50, 0.8), 500);
+      }
+
+      spawnConfettiHeart(window.innerWidth / 2, window.innerHeight / 2, 75);
+    }
+
+    function closeCelebration() {
+      document.getElementById('celebration-modal').style.display = 'none';
+    }
+
+    function spawnConfettiHeart(originX, originY, count) {
+      const symbols = ['❤️', '🌹', '🎀', '✨', '💖', '🌸', '🥤'];
+      for (let i = 0; i < count; i++) {
+        const el = document.createElement('div');
+        el.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+        el.style.position = 'fixed';
+        el.style.left = originX + 'px';
+        el.style.top = originY + 'px';
+        el.style.fontSize = (16 + Math.random() * 24) + 'px';
+        el.style.pointerEvents = 'none';
+        el.style.zIndex = 3500;
+        el.style.transition = 'all 1.4s cubic-bezier(0.1, 0.8, 0.3, 1)';
+        document.body.appendChild(el);
+
+        const angle = Math.random() * Math.PI * 2;
+        const velocity = 80 + Math.random() * 220;
+        const targetX = originX + Math.cos(angle) * velocity;
+        const targetY = originY + Math.sin(angle) * velocity - 60;
+
+        setTimeout(() => {
+          el.style.transform = `translate(${targetX - originX}px, ${targetY - originY}px) scale(0)`;
+          el.style.opacity = '0';
+        }, 20);
+
+        setTimeout(() => {
+          el.remove();
+        }, 1500);
+      }
+    }
+  </script>
+</body>
+</html>
