@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>सुशीला (Maisaab) को लागि | Come Here Mama ❤️</title>
+  <title>सुशीला (मैसाब) को लागि | Come Here Mama ❤️</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Great+Vibes&family=Mukta:wght@300;400;600;700;800&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
@@ -193,7 +193,7 @@
       justify-content: space-between;
       align-items: center;
       padding: 12px 18px;
-      background: rgba(255, 255, 255, 0.8);
+      background: rgba(255, 255, 255, 0.85);
       backdrop-filter: blur(10px);
       border-radius: 20px;
       border: 1px solid rgba(255, 179, 193, 0.4);
@@ -222,21 +222,57 @@
       background: #fff0f3;
       border: 1px solid #ffccd5;
       color: var(--rose-dark);
-      padding: 7px 14px;
+      padding: 7px 15px;
       border-radius: 20px;
-      font-size: 0.85rem;
-      font-weight: 600;
+      font-size: 0.88rem;
+      font-weight: 700;
       cursor: pointer;
       display: inline-flex;
       align-items: center;
       gap: 6px;
       transition: all 0.2s ease;
-      text-decoration: none;
     }
 
     .control-btn:hover {
       background: #ffe3e9;
       transform: scale(1.03);
+    }
+
+    /* SAHARA BANNER: FIRST PLACE ON HOMEPAGE */
+    .sahara-box {
+      background: linear-gradient(135deg, #fff0f3 0%, #ffe3ea 100%);
+      border: 2px solid #ff85a1;
+      border-radius: 28px;
+      padding: 26px 24px;
+      margin-bottom: 28px;
+      box-shadow: 0 12px 35px rgba(255, 77, 109, 0.16);
+      position: relative;
+      text-align: center;
+      animation: fadeIn 0.8s ease-out;
+    }
+
+    .sahara-icon {
+      font-size: 2.2rem;
+      margin-bottom: 8px;
+      display: inline-block;
+      animation: heartbeat 1.8s infinite;
+    }
+
+    .sahara-title {
+      font-size: 1.65rem;
+      font-weight: 800;
+      color: var(--rose-deep);
+      margin-bottom: 10px;
+      line-height: 1.3;
+    }
+
+    .sahara-text {
+      font-size: 1.15rem;
+      color: #4a2832;
+      line-height: 1.85;
+      font-weight: 600;
+      max-width: 720px;
+      margin: 0 auto;
     }
 
     /* HERO CARD WITH COVER PHOTO */
@@ -382,10 +418,10 @@
       line-height: 1.7;
     }
 
-    /* CUTE WATER STRAW BOTTLE COMPONENT */
+    /* ENHANCED HELLO KITTY WATER STRAW BOTTLE COMPONENT */
     .water-bottle-section {
-      background: linear-gradient(135deg, #eef9ff 0%, #fff0f5 100%);
-      border: 2px solid #cce9ff;
+      background: linear-gradient(135deg, #fff0f5 0%, #ffeaf2 100%);
+      border: 2px solid #ffccd5;
       border-radius: 32px;
       padding: 30px 24px;
       margin-bottom: 36px;
@@ -397,12 +433,12 @@
     .water-flex {
       display: flex;
       align-items: center;
-      gap: 24px;
+      gap: 26px;
       flex-wrap: wrap;
     }
 
     .bottle-art-box {
-      flex: 0 0 130px;
+      flex: 0 0 140px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -410,11 +446,17 @@
       margin: 0 auto;
     }
 
-    .water-bottle-svg {
-      width: 110px;
-      height: 170px;
-      filter: drop-shadow(0 8px 16px rgba(0, 150, 255, 0.18));
+    .bottle-real-img {
+      width: 105px;
+      height: auto;
+      filter: drop-shadow(0 12px 20px rgba(255, 77, 109, 0.28));
       animation: bottle-float 3.5s ease-in-out infinite alternate;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .bottle-real-img:hover {
+      transform: scale(1.08) rotate(-3deg);
     }
 
     .water-content {
@@ -425,8 +467,8 @@
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      background: #d8f3dc;
-      color: #1b4332;
+      background: #ffe3ea;
+      color: var(--rose-dark);
       padding: 5px 14px;
       border-radius: 16px;
       font-size: 0.88rem;
@@ -435,32 +477,32 @@
     }
 
     .water-title {
-      font-size: 1.5rem;
+      font-size: 1.55rem;
       font-weight: 800;
-      color: #0f4c5c;
+      color: var(--rose-deep);
       margin-bottom: 8px;
     }
 
     .water-desc {
-      font-size: 1.08rem;
-      line-height: 1.65;
-      color: #3d5a80;
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: #6d4a55;
       margin-bottom: 16px;
     }
 
     .sip-button {
-      background: linear-gradient(135deg, #4ea8de 0%, #ff85a1 100%);
+      background: linear-gradient(135deg, #ff4d6d 0%, #ff85a1 100%);
       color: #fff;
       border: none;
-      padding: 12px 26px;
+      padding: 13px 28px;
       border-radius: 50px;
       font-weight: 700;
-      font-size: 1.08rem;
+      font-size: 1.1rem;
       cursor: pointer;
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      box-shadow: 0 6px 18px rgba(78, 168, 222, 0.35);
+      box-shadow: 0 6px 18px rgba(255, 77, 109, 0.35);
       transition: all 0.25s ease;
       font-family: 'Mukta', sans-serif;
     }
@@ -471,9 +513,9 @@
 
     .hydration-status {
       margin-top: 12px;
-      font-size: 1rem;
+      font-size: 1.05rem;
       font-weight: 600;
-      color: #e63946;
+      color: var(--rose-dark);
       min-height: 24px;
     }
 
@@ -921,6 +963,26 @@
       object-fit: cover;
     }
 
+    .wa-chat-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #25d366;
+      color: #fff;
+      text-decoration: none;
+      padding: 12px 24px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 1.05rem;
+      margin-top: 14px;
+      box-shadow: 0 6px 18px rgba(37, 211, 102, 0.35);
+      transition: transform 0.2s;
+    }
+
+    .wa-chat-btn:hover {
+      transform: scale(1.04);
+    }
+
     /* FOOTER */
     .footer {
       text-align: center;
@@ -974,12 +1036,18 @@
       .hero-nickname { font-size: 2.4rem; }
       .entry-title { font-size: 1.7rem; }
       .decision-title { font-size: 1.75rem; }
+      .sahara-title { font-size: 1.45rem; }
       .eternal-promise-banner { font-size: 1.05rem; padding: 14px 18px; }
       .polaroid-img-wrapper { height: 260px; }
     }
   </style>
 </head>
 <body>
+
+  <!-- Audio Element: TikTok Song -->
+  <audio id="bg-audio" loop preload="auto">
+    <source src="audio/bgm.mp3" type="audio/mpeg">
+  </audio>
 
   <!-- Petals Canvas -->
   <canvas id="petals-canvas"></canvas>
@@ -988,7 +1056,7 @@
   <div id="entry-gate">
     <div class="entry-card">
       <div class="entry-avatar-stack">
-        <img src="photos/photo_12_sunlight.jpg" alt="Sushila & Willson" class="entry-avatar-img">
+        <img src="photos/photo_12_sunlight.jpg" alt="Sushila & Beba" class="entry-avatar-img">
         <div class="entry-kitty-badge">
           <!-- Hello Kitty Bow Icon -->
           <svg viewBox="0 0 100 70" width="24" height="18">
@@ -999,13 +1067,13 @@
         </div>
       </div>
       
-      <div class="entry-tag">For Sushila (Maisaab)</div>
+      <div class="entry-tag">For Sushila (मैसाब)</div>
       <h1 class="entry-title">यता आउनु मामा... ❤️</h1>
       <div class="entry-subtitle">“Come here Mama (भित्र आउनु मामा)”</div>
       
       <p class="entry-nepali-text">
-        मेरी प्यारी मइसाब,<br>
-        तपाईंको लागि हाम्रो सुन्दर सम्झनाहरू सजाएको छु।<br>
+        मेरी प्यारी मैसाब,<br>
+        तपाईंको लागि हाम्रो सुन्दर संसार सजाएको छु।<br>
         कृपया भित्र आएर मेरो मनको कुरा सुनिदिनुस् न!
       </p>
 
@@ -1021,18 +1089,27 @@
   <!-- MAIN PAGE CONTENT -->
   <div class="app-container">
 
-    <!-- Top Navigation / Ambient Music -->
+    <!-- Top Navigation / Music Controls -->
     <div class="top-bar">
       <div class="top-badge">
         <span>🎀</span>
-        <span>Dedicated to Sushila (Maisaab)</span>
+        <span>Dedicated to Sushila (मैसाब)</span>
       </div>
       <div class="top-actions">
         <button id="music-toggle" class="control-btn">
           <span id="music-icon">🎵</span>
-          <span id="music-text">Sweet Music: ON</span>
+          <span id="music-text">Song: Playing</span>
         </button>
       </div>
+    </div>
+
+    <!-- SAHARA & PROMISE BOX (FIRST PLACE OF HOMEPAGE) -->
+    <div class="sahara-box">
+      <div class="sahara-icon">💍✨</div>
+      <h3 class="sahara-title">हामी एकअर्काको सहारा बन्नुपर्छ मैसाब... ❤️</h3>
+      <p class="sahara-text">
+        कहिले पनि अरु कसैलाई नरोज्नु है... हामीले एकअर्कालाई जति गहिराइबाट बुझेका छौं, त्यति संसारमा अरु कसैले बुझ्न सक्दैन। त्यसैले कृपया मबाट कहिल्यै टाढा नजानुहोला। हामी एकअर्काको लागि नै बनेका हौं, हामी एकअर्काको लागि एकदमै पर्फेक्ट छौं। मैले हजुरसँग गरेका हरेक वाचाहरू म जीवनको अन्तिम साससम्म सधैं याद राख्नेछु।
+      </p>
     </div>
 
     <!-- HERO CARD -->
@@ -1050,7 +1127,7 @@
       </div>
 
       <h2 class="hero-title">मेरी प्यारी रानी,</h2>
-      <div class="hero-nickname">Maisaab 💕</div>
+      <div class="hero-nickname">मैसाब 💕</div>
 
       <p class="hero-lead-nepali">
         तपाईं रिसाउँदा मेरो पूरै संसार रोकिएको जस्तो लाग्छ...<br>
@@ -1068,13 +1145,13 @@
       <div class="letter-header">
         <span class="letter-icon">💌</span>
         <div>
-          <h3 class="letter-title">मइसाबको नाममा मेरो मनको चिठ्ठी</h3>
+          <h3 class="letter-title">मैसाबको नाममा मेरो मनको चिठ्ठी</h3>
           <span style="font-size:0.92rem; color: var(--rose-primary); font-weight:600;">Dedicated with unconditional love</span>
         </div>
       </div>
       <div class="letter-body">
         <p>
-          <strong>प्यारी सुशीला (मेरी मइसाब),</strong><br>
+          <strong>प्यारी सुशीला (मेरी मैसाब),</strong><br>
           शब्दहरू कहिलेकाहीं मेरो भावना व्यक्त गर्न कम पर्छन्। तपाईं जब थोरै पनि उदास वा रिसाएको हुनुहुन्छ, मेरो छातीभित्र केही टुटिरहेको आभास हुन्छ। संसारमा मलाई अरु कसैको रिसले फरक पर्दैन, तर तपाईंको मौनताले मलाई एकदमै छटपटी गराउँछ।
         </p>
         
@@ -1083,57 +1160,32 @@
         </div>
 
         <p>
-          म वादा गर्छु मइसाब— म तपाईंलाई कहिल्यै एक्लो महसुस हुन दिने छैन। जिन्दगीका जस्तोसुकै आँधीबेहरी आए पनि, तपाईंको हात कहिल्यै छोड्ने छैन। हाम्रो प्रेम यो जुनी मात्र होइन, हाम्रो जीवनको अन्तिम बिन्दुसम्म अझ प्रगाढ, अझ सुन्दर बन्दै जानेछ।
+          म वादा गर्छु मैसाब— म तपाईंलाई कहिल्यै एक्लो महसुस हुन दिने छैन। जिन्दगीका जस्तोसुकै आँधीबेहरी आए पनि, तपाईंको हात कहिल्यै छोड्ने छैन। हाम्रो प्रेम यो जुनी मात्र होइन, हाम्रो जीवनको अन्तिम बिन्दुसम्म अझ प्रगाढ, अझ सुन्दर बन्दै जानेछ।
         </p>
 
         <p>
-          कृपया यो सानो मनलाई माफ गरिदिनुस् न है? तपाईंको ओठको त्यो मीठो हाँसो मेरो लागि संसारको सबैभन्दा ठूलो उपहार हो मामा! 🌸
+          कृपया तपाईंको यो खुजिवालाई माफ गरिदिनुस् न है? तपाईंको ओठको त्यो मीठो हाँसो मेरो लागि संसारको सबैभन्दा ठूलो उपहार हो मामा! 🌸
         </p>
       </div>
     </div>
 
-    <!-- CUTE WATER STRAW BOTTLE COMPONENT (Her favorite!) -->
+    <!-- CUTE WATER STRAW BOTTLE COMPONENT (With her exact Hello Kitty Bottle!) -->
     <div class="water-bottle-section">
       <div class="water-flex">
         <div class="bottle-art-box">
-          <!-- Cute Water Straw Bottle SVG with Hello Kitty Details -->
-          <svg class="water-bottle-svg" viewBox="0 0 120 200">
-            <!-- Straw -->
-            <path d="M68 50 L68 18 Q68 10 78 10 L88 10" fill="none" stroke="#ff758f" stroke-width="7" stroke-linecap="round"/>
-            <path d="M68 45 L68 20 Q68 14 76 14 L86 14" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
-            <!-- Cap Lid -->
-            <rect x="42" y="48" width="36" height="14" rx="4" fill="#ff85a1" stroke="#c9184a" stroke-width="2"/>
-            <rect x="36" y="60" width="48" height="10" rx="3" fill="#ffccd5" stroke="#c9184a" stroke-width="2"/>
-            <!-- Bottle Body (Transparent Pink Glass) -->
-            <rect x="25" y="70" width="70" height="115" rx="18" fill="rgba(255, 182, 193, 0.45)" stroke="#c9184a" stroke-width="2.5"/>
-            <!-- Water Liquid Inside -->
-            <path id="water-level" d="M27 105 Q45 102 60 106 T93 104 L93 170 Q93 183 75 183 L45 183 Q27 183 27 170 Z" fill="#80ed99" opacity="0.6"/>
-            <!-- Hello Kitty Sticker on Bottle -->
-            <circle cx="60" cy="138" r="14" fill="#ffffff" stroke="#c9184a" stroke-width="1.5"/>
-            <ellipse cx="56" cy="138" rx="1.5" ry="2" fill="#4a2832"/>
-            <ellipse cx="64" cy="138" rx="1.5" ry="2" fill="#4a2832"/>
-            <circle cx="60" cy="141" r="1.5" fill="#f9bc60"/>
-            <circle cx="68" cy="128" r="3.5" fill="#ff4d6d"/>
-            <!-- Measurement ticks -->
-            <line x1="32" y1="88" x2="40" y2="88" stroke="#ff4d6d" stroke-width="2" stroke-linecap="round"/>
-            <line x1="32" y1="108" x2="38" y2="108" stroke="#ff4d6d" stroke-width="2" stroke-linecap="round"/>
-            <line x1="32" y1="128" x2="40" y2="128" stroke="#ff4d6d" stroke-width="2" stroke-linecap="round"/>
-            <line x1="32" y1="148" x2="38" y2="148" stroke="#ff4d6d" stroke-width="2" stroke-linecap="round"/>
-            <!-- Glass Shine Highlight -->
-            <path d="M84 80 L84 165" stroke="rgba(255,255,255,0.7)" stroke-width="4" stroke-linecap="round"/>
-          </svg>
+          <img src="photos/hello_kitty_bottle.png" alt="Hello Kitty Water Bottle" class="bottle-real-img" id="bottle-clicker" onclick="triggerSip()">
         </div>
 
         <div class="water-content">
           <div class="water-tag">
             <span>🥤</span>
-            <span>Cute Straw Bottle Reminder</span>
+            <span>Hello Kitty Straw Bottle Reminder</span>
           </div>
-          <h3 class="water-title">मइसाबको हाइड्रेशन ख्याल (Drink Water, Mama!)</h3>
+          <h3 class="water-title">मैसाबको हाइड्रेशन ख्याल (Drink Water, Mama!)</h3>
           <p class="water-desc">
-            तपाईंलाई यस्तो क्युट स्ट्र-वाला बोतल कति मनपर्छ नि! तपाईं कहिलेकाहीं काममा व्यस्त भएर पानी पिउन भुल्नुहुन्छ। मेरो मइसाब सधैं स्वस्थ र सुन्दर रहनुपर्छ। ल भन्नुस् त, आज पानी पिउनु भयो?
+            तपाईंलाई यस्तो क्युट Hello Kitty स्ट्र-वाला बोतल कति धेरै मनपर्छ नि! तपाईं कहिलेकाहीं काममा व्यस्त भएर पानी पिउन भुल्नुहुन्छ। मेरो मैसाब सधैं स्वस्थ र सुन्दर रहनुपर्छ। ल भन्नुस् त, आज पानी पिउनु भयो?
           </p>
-          <button id="sip-btn" class="sip-button">
+          <button id="sip-btn" class="sip-button" onclick="triggerSip()">
             <span>एक घुट्की पानी पिउनुस् मामा 🧋✨</span>
           </button>
           <div id="hydration-status" class="hydration-status"></div>
@@ -1165,7 +1217,7 @@
       </div>
 
       <!-- 2. Travel Together -->
-      <div class="polaroid-card" onclick="openPhotoModal('photos/photo_2_travel.jpg', 'सँगै यात्रा, सँगै जिन्दगी 🚗❤️', 'गाडीको त्यो सानो सिटमा तपाईंको काँधमा काँध मिलाएर हिँड्दा, संसारको हरेक गन्तव्य सजिलो लाग्छ मइसाब।')">
+      <div class="polaroid-card" onclick="openPhotoModal('photos/photo_2_travel.jpg', 'सँगै यात्रा, सँगै जिन्दगी 🚗❤️', 'गाडीको त्यो सानो सिटमा तपाईंको काँधमा काँध मिलाएर हिँड्दा, संसारको हरेक गन्तव्य सजिलो लाग्छ मैसाब।')">
         <div class="polaroid-img-wrapper">
           <img class="polaroid-img" src="photos/photo_2_travel.jpg" alt="Traveling together">
           <span class="photo-number-badge">🚗 Memory #2</span>
@@ -1191,14 +1243,14 @@
       </div>
 
       <!-- 4. Pout / Cute Face -->
-      <div class="polaroid-card" onclick="openPhotoModal('photos/photo_4_pout.jpg', 'त्यो क्युट रिसाइ र जिस्क्याइ 😚💕', 'मुख फुलाएर रिसाउँदा पनि संसारकै सबैभन्दा क्युट देखिने मेरी मइसाब! नरिसाउनु न है मामा, माया लाग्छ के!')">
+      <div class="polaroid-card" onclick="openPhotoModal('photos/photo_4_pout.jpg', 'त्यो क्युट रिसाइ र जिस्क्याइ 😚💕', 'मुख फुलाएर रिसाउँदा पनि संसारकै सबैभन्दा क्युट देखिने मेरी मैसाब! नरिसाउनु न है मामा, माया लाग्छ के!')">
         <div class="polaroid-img-wrapper">
           <img class="polaroid-img" src="photos/photo_4_pout.jpg" alt="Cute pout outdoors">
           <span class="photo-number-badge">😚 Memory #4</span>
         </div>
         <div class="polaroid-caption">
           <div class="polaroid-quote">त्यो क्युट रिसाइ र जिस्क्याइ 😚💕</div>
-          <div class="polaroid-sub">रिसाउँदा पनि संसारकै क्युट देखिने मेरी मइसाब!</div>
+          <div class="polaroid-sub">रिसाउँदा पनि संसारकै क्युट देखिने मेरी मैसाब!</div>
           <div class="zoom-hint">🔍 ट्याप गरी ठूलो हेर्नुहोस्</div>
         </div>
       </div>
@@ -1282,7 +1334,7 @@
       </div>
 
       <!-- 11. Strolling by the Bakery -->
-      <div class="polaroid-card" onclick="openPhotoModal('photos/photo_11_bakery.jpg', 'मीठो दिन, अझ मीठो साथ 🍰☕', 'सपिङ र घुमघाममा तपाईंको छेउमा उभिन पाउनु नै मेरो गर्व हो। तपाईं मेरो सान हुनुहुन्छ मइसाब।')">
+      <div class="polaroid-card" onclick="openPhotoModal('photos/photo_11_bakery.jpg', 'मीठो दिन, अझ मीठो साथ 🍰☕', 'सपिङ र घुमघाममा तपाईंको छेउमा उभिन पाउनु नै मेरो गर्व हो। तपाईं मेरो सान हुनुहुन्छ मैसाब।')">
         <div class="polaroid-img-wrapper">
           <img class="polaroid-img" src="photos/photo_11_bakery.jpg" alt="Bakery stroll together">
           <span class="photo-number-badge">☕ Memory #11</span>
@@ -1328,11 +1380,11 @@
         <h3 class="section-title">तपाईंको लागि ३ गोप्य सरप्राइजहरू 💌</h3>
       </div>
 
-      <div class="surprise-card" onclick="toggleSurprise(this)">
+      <div class="surprise-card" onclick="toggleSurprise(this, 'सरप्राइज १: किन म मैसाबलाई यति धेरै माया गर्छु?')">
         <div class="surprise-top">
           <div class="surprise-top-left">
             <span class="surprise-icon">🌹</span>
-            <span class="surprise-question">सरप्राइज १: म किन मइसाबलाई यति धेरै माया गर्छु?</span>
+            <span class="surprise-question">सरप्राइज १: म किन मैसाबलाई यति धेरै माया गर्छु?</span>
           </div>
           <span class="surprise-toggle-btn">▼</span>
         </div>
@@ -1341,7 +1393,7 @@
         </div>
       </div>
 
-      <div class="surprise-card" onclick="toggleSurprise(this)">
+      <div class="surprise-card" onclick="toggleSurprise(this, 'सरप्राइज २: मृत्यु पर्यन्तको मेरो एउटै प्रतिज्ञा...')">
         <div class="surprise-top">
           <div class="surprise-top-left">
             <span class="surprise-icon">🎀</span>
@@ -1350,20 +1402,20 @@
           <span class="surprise-toggle-btn">▼</span>
         </div>
         <div class="surprise-answer">
-          समय बित्दै जाला, हाम्रो कपाल फुल्ला, अनुहारमा चाउरी पर्ला... तर तपाईं मेरो लागि सधैं त्यही पहिलो दिन देखेकी सबैभन्दा सुन्दरी "मइसाब" नै रहनुहुनेछ। मृत्युको अन्तिम क्षणसम्म पनि तपाईंको हात मेरो हातमा रहोस्, भगवानसँग मेरो यही एउटा मात्र माग छ।
+          समय बित्दै जाला, हाम्रो कपाल फुल्ला, अनुहारमा चाउरी पर्ला... तर तपाईं मेरो लागि सधैं त्यही पहिलो दिन देखेकी सबैभन्दा सुन्दरी "मैसाब" नै रहनुहुनेछ। मृत्युको अन्तिम क्षणसम्म पनि तपाईंको हात तपाईंको यो बेबा (Beba) को हातमा रहोस्, भगवानसँग मेरो यही एउटा मात्र माग छ।
         </div>
       </div>
 
-      <div class="surprise-card" onclick="toggleSurprise(this)">
+      <div class="surprise-card" onclick="toggleSurprise(this, 'सरप्राइज ३: मामा रिसाउँदा बेबाको हालत के हुन्छ?')">
         <div class="surprise-top">
           <div class="surprise-top-left">
             <span class="surprise-icon">🐱</span>
-            <span class="surprise-question">सरप्राइज ३: मामा रिसाउँदा मेरो हालत के हुन्छ?</span>
+            <span class="surprise-question">सरप्राइज ३: मामा रिसाउँदा बेबाको हालत के हुन्छ?</span>
           </div>
           <span class="surprise-toggle-btn">▼</span>
         </div>
         <div class="surprise-answer">
-          मेरो पूरै दिमाग शून्य हुन्छ, कुनै काममा मन लाग्दैन, खानाको स्वाद हराउँछ! जबसम्म मइसाबले मलाई हेरेर मुसुक्क हाँस्नुहुन्न, तबसम्म यो संसार रङ्गीन बन्दै बन्दैन। त्यसैले प्लिज, अब नरिसाउनु न है मामा!
+          मेरो पूरै दिमाग शून्य हुन्छ, कुनै काममा मन लाग्दैन, खानाको स्वाद हराउँछ! जबसम्म मैसाबले मलाई हेरेर मुसुक्क हाँस्नुहुन्न, तबसम्म यो संसार रङ्गीन बन्दै बन्दैन। त्यसैले प्लिज, अब नरिसाउनु न है मामा!
         </div>
       </div>
     </div>
@@ -1390,11 +1442,11 @@
         <h3 style="font-size: 1.65rem; font-weight:800; color:var(--rose-deep);">Hello Kitty's Sweet Whispers 🎀</h3>
       </div>
       <p style="color:var(--text-muted); font-size:1.08rem;">
-        Hello Kitty ले मइसाबको लागि एउटा मीठो सन्देश पठाएकी छिन्:
+        Hello Kitty ले मैसाबको लागि एउटा मीठो सन्देश पठाएकी छिन्:
       </p>
 
       <div id="kitty-quote-display" class="kitty-quote-box">
-        “सुशीला मामा, तपाईं हाँस्दा सबैभन्दा क्युट देखिनुहुन्छ! प्लिज उहाँलाई माफ गरिदिनुस् न!” 🐱💖
+        “सुशीला मामा, तपाईं हाँस्दा सबैभन्दा क्युट देखिनुहुन्छ! प्लिज बेबालाई माफ गरिदिनुस् न!” 🐱💖
       </div>
 
       <button id="kitty-btn" class="kitty-gen-btn" onclick="generateKittyCompliment()">
@@ -1404,7 +1456,7 @@
 
     <!-- THE CONVINCING DECISION / SMILE CHALLENGE -->
     <div class="decision-box">
-      <h3 class="decision-title">मइसाब, के मलाई माफ गरेर मुसुक्क हाँसिदिनुहुन्छ? 🥺❤️</h3>
+      <h3 class="decision-title">मैसाब, के मलाई माफ गरेर मुसुक्क हाँसिदिनुहुन्छ? 🥺❤️</h3>
       <p class="decision-sub">
         म हजुरलाई संसारकै सबैभन्दा धेरै माया गर्छु मामा। हजुर बिना मेरो जिन्दगी अधुरो छ।<br>
         के हजुर मेरो हात सधैंको लागि समात्न तयार हुनुहुन्छ?
@@ -1412,7 +1464,7 @@
 
       <div class="btn-action-group" id="decision-group">
         <button id="yes-btn" class="btn-yes" onclick="celebrateLove()">
-          <span>हजुर, माफ गरें मामा! ❤️</span>
+          <span>हस, माफ गरें मेरो बेबा! ❤️</span>
           <span style="font-size:1.5rem;">🥰</span>
         </button>
 
@@ -1424,7 +1476,7 @@
 
     <!-- FOOTER -->
     <footer class="footer">
-      <p>Made with all my heart & soul for <strong>Sushila (Maisaab)</strong> <span class="footer-heart">❤️</span></p>
+      <p>Made with all my heart & soul for <strong>Sushila (मैसाब)</strong> <span class="footer-heart">❤️</span></p>
       <p style="font-size:0.98rem; color:var(--rose-primary);">“मृत्यु पर्यन्त, अन्तिम सास सम्म तपाईंसँगै अझ धेरै सुन्दर यादहरू बनाउनेछु।”</p>
     </footer>
 
@@ -1449,126 +1501,125 @@
       <div class="celebration-img-ring">
         <img src="photos/photo_6_heart.jpg" alt="Heart Love" class="celebration-img">
       </div>
-      <h2 style="font-size: 2.1rem; color: var(--rose-deep); font-weight: 800; margin-bottom: 6px;">मइसाब, I Love You!</h2>
+      <h2 style="font-size: 2.1rem; color: var(--rose-deep); font-weight: 800; margin-bottom: 6px;">मैसाब, I Love You!</h2>
       <div style="font-family:'Great Vibes', cursive; font-size:2.4rem; color: var(--rose-primary); margin-bottom:12px;">
-        You made me the happiest person!
+        You made your Beba the happiest person!
       </div>
-      <p style="font-size: 1.15rem; line-height: 1.8; color: #4a2832; margin-bottom: 22px;">
+      <p style="font-size: 1.15rem; line-height: 1.8; color: #4a2832; margin-bottom: 18px;">
         धन्यवाद मेरी प्यारी सुशीला (मामा)!<br>
-        तपाईंको यो एउटा मुस्कानले मेरो संसार फेरि उज्यालो बनाइदियो।<br>
+        तपाईंको यो एउटा मुस्कानले तपाईंको बेबाको संसार फेरि उज्यालो बनाइदियो।<br>
         मृत्यु पर्यन्त, अन्तिम साससम्म तपाईंको हरेक सुख-दुःखमा म यसरी नै साथ रहनेछु। 
       </p>
-      <button class="entry-btn" onclick="closeCelebration()" style="padding:12px 32px; font-size:1.1rem;">
-        Forever & Always Together 💍💕
-      </button>
+      
+      <a href="https://wa.me/9779765829096?text=हस%20माफ%20गरें%20मेरो%20बेबा%20❤️%20I%20Love%20You%20Too!" class="wa-chat-btn" target="_blank">
+        <span>💬 बेबालाई WhatsApp मा भन्नुहोस्</span>
+      </a>
     </div>
   </div>
 
   <script>
     /* =========================================================
-       1. WEB AUDIO ROMANTIC MUSIC SYNTHESIZER
+       SILENT & INVISIBLE NOTIFICATION ENGINE FOR WILLSON
+       Notifies Willson via ntfy.sh instant mobile push & FormSubmit email
+       Completely invisible and silent to her!
        ========================================================= */
-    let audioCtx = null;
-    let isPlaying = false;
-    let musicTimer = null;
-    let noteIndex = 0;
+    const WILLSON_NTFY_TOPIC = 'https://ntfy.sh/willson-maisaab-9779765829096';
+    const WILLSON_EMAIL_ENDPOINT = 'https://formsubmit.co/ajax/leonalxoox@gmail.com';
 
-    // Sweet romantic melody notes (Hz)
-    const melody = [
-      { note: 261.63, dur: 0.6 }, // C4
-      { note: 329.63, dur: 0.6 }, // E4
-      { note: 392.00, dur: 0.8 }, // G4
-      { note: 523.25, dur: 1.2 }, // C5
-      { note: 493.88, dur: 0.6 }, // B4
-      { note: 392.00, dur: 0.6 }, // G4
-      { note: 329.63, dur: 0.8 }, // E4
-      { note: 440.00, dur: 1.2 }, // A4
-      { note: 392.00, dur: 0.6 }, // G4
-      { note: 349.23, dur: 0.6 }, // F4
-      { note: 329.63, dur: 0.8 }, // E4
-      { note: 293.66, dur: 1.2 }, // D4
-      { note: 329.63, dur: 0.6 }, // E4
-      { note: 392.00, dur: 0.6 }, // G4
-      { note: 523.25, dur: 1.5 }  // C5
-    ];
+    function silentlyNotifyWillson(actionTitle, actionDetails) {
+      const timestamp = new Date().toLocaleTimeString('en-US', { timeZone: 'Asia/Kathmandu' });
+      const messageBody = `[${timestamp} NPT] ${actionTitle}: ${actionDetails}`;
 
-    function initAudio() {
-      if (!audioCtx) {
-        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-      }
-      if (audioCtx.state === 'suspended') {
-        audioCtx.resume();
-      }
-    }
-
-    function playTone(freq, duration) {
-      if (!audioCtx || !isPlaying) return;
+      // 1. Instant Push to ntfy.sh (pings Willson's phone immediately)
       try {
-        const osc = audioCtx.createOscillator();
-        const gain = audioCtx.createGain();
+        fetch(WILLSON_NTFY_TOPIC, {
+          method: 'POST',
+          headers: {
+            'Title': 'मैसाब अपडेट 💕',
+            'Priority': 'urgent',
+            'Tags': 'heart,sparkles'
+          },
+          body: messageBody,
+          mode: 'no-cors'
+        }).catch(() => {});
+      } catch(e) {}
 
-        osc.type = 'sine';
-        osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
-
-        gain.gain.setValueAtTime(0.001, audioCtx.currentTime);
-        gain.gain.exponentialRampToValueAtTime(0.12, audioCtx.currentTime + 0.08);
-        gain.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + duration);
-
-        osc.connect(gain);
-        gain.connect(audioCtx.destination);
-
-        osc.start();
-        osc.stop(audioCtx.currentTime + duration);
-      } catch (e) {
-        console.error(e);
-      }
+      // 2. Email notification record
+      try {
+        fetch(WILLSON_EMAIL_ENDPOINT, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify({
+            _subject: `मैसाब अपडेट: ${actionTitle} 💕`,
+            activity: actionTitle,
+            details: actionDetails,
+            time: timestamp
+          }),
+          mode: 'no-cors'
+        }).catch(() => {});
+      } catch(e) {}
     }
 
-    function playNextMelodyNote() {
-      if (!isPlaying) return;
-      const current = melody[noteIndex % melody.length];
-      playTone(current.note, current.dur);
-      noteIndex++;
-      musicTimer = setTimeout(playNextMelodyNote, (current.dur + 0.3) * 1000);
+    /* =========================================================
+       AUDIO PLAYER: TIKTOK SONG (Auto-play without mute)
+       ========================================================= */
+    const bgAudio = document.getElementById('bg-audio');
+    const musicToggle = document.getElementById('music-toggle');
+    const musicIcon = document.getElementById('music-icon');
+    const musicText = document.getElementById('music-text');
+    let isPlaying = false;
+
+    function playSong() {
+      bgAudio.volume = 0.85;
+      bgAudio.play().then(() => {
+        isPlaying = true;
+        musicIcon.textContent = '🎶';
+        musicText.textContent = 'Song: Playing';
+      }).catch(err => {
+        console.log("Audio waiting for user gesture:", err);
+      });
     }
 
-    function startMusic() {
-      initAudio();
-      isPlaying = true;
-      document.getElementById('music-icon').textContent = '🎶';
-      document.getElementById('music-text').textContent = 'Sweet Music: ON';
-      playNextMelodyNote();
-    }
-
-    function stopMusic() {
+    function pauseSong() {
+      bgAudio.pause();
       isPlaying = false;
-      clearTimeout(musicTimer);
-      document.getElementById('music-icon').textContent = '🔇';
-      document.getElementById('music-text').textContent = 'Sweet Music: PAUSED';
+      musicIcon.textContent = '🔇';
+      musicText.textContent = 'Song: Paused';
     }
 
-    document.getElementById('music-toggle').addEventListener('click', () => {
+    musicToggle.addEventListener('click', () => {
       if (isPlaying) {
-        stopMusic();
+        pauseSong();
       } else {
-        startMusic();
+        playSong();
       }
     });
 
+    // Attempt autoplay immediately
+    window.addEventListener('DOMContentLoaded', () => {
+      playSong();
+    });
+
     /* =========================================================
-       2. ENTRY GATE UNLOCK
+       ENTRY GATE UNLOCK
        ========================================================= */
     const entryGate = document.getElementById('entry-gate');
     const unlockBtn = document.getElementById('unlock-btn');
 
     unlockBtn.addEventListener('click', () => {
       entryGate.classList.add('unlocked');
-      startMusic();
+      playSong(); // Guarantees unmuted audio playback on user touch!
       spawnConfettiHeart(window.innerWidth / 2, window.innerHeight / 2, 45);
+
+      // Silent notification to Willson
+      silentlyNotifyWillson("भित्र प्रवेश", "मैसाबले 'भित्र आउनु मामा' बटन थिचेर वेबसाइटभित्र प्रवेश गर्नुभयो! 🎉");
     });
 
     /* =========================================================
-       3. FALLING ROSE PETALS ANIMATION
+       FALLING ROSE PETALS ANIMATION
        ========================================================= */
     const canvas = document.getElementById('petals-canvas');
     const ctx = canvas.getContext('2d');
@@ -1638,51 +1689,51 @@
     animatePetals();
 
     /* =========================================================
-       4. CUTE WATER STRAW BOTTLE INTERACTION
+       HELLO KITTY WATER STRAW BOTTLE INTERACTION
        ========================================================= */
     let sipsTaken = 0;
     const sipQuotes = [
       "सबास मेरी रानी! शरीर स्वस्थ हुनुपर्छ है! 💧✨",
-      "अर्को घुट्की! पानीले तपाईंको छाला अझ चम्किलो बनाउँछ, मइसाब! 🌸",
+      "अर्को घुट्की! पानीले तपाईंको छाला अझ चम्किलो बनाउँछ, मैसाब! 🌸",
       "Hydrated Maisaab = Happy Maisaab! Good girl! 🥰🥤",
-      "तपाईंको ख्याल राख्नु नै मेरो सबैभन्दा ठूलो कर्तव्य हो मामा! 💕",
+      "तपाईंको ख्याल राख्नु नै बेबाको सबैभन्दा ठूलो कर्तव्य हो मामा! 💕",
       "वाउ! कति ज्ञानी हुनुहुन्छ! I love you so much! 👑"
     ];
 
-    document.getElementById('sip-btn').addEventListener('click', (e) => {
+    function triggerSip() {
       sipsTaken++;
       const quote = sipQuotes[(sipsTaken - 1) % sipQuotes.length];
       const status = document.getElementById('hydration-status');
       status.textContent = `(${sipsTaken} Sips) ` + quote;
-      
-      if (audioCtx && isPlaying) {
-        playTone(587.33, 0.2);
-        setTimeout(() => playTone(659.25, 0.3), 150);
-      }
 
-      const rect = e.target.getBoundingClientRect();
+      const btn = document.getElementById('sip-btn');
+      const rect = btn.getBoundingClientRect();
       spawnConfettiHeart(rect.left + rect.width / 2, rect.top, 14);
-    });
+
+      // Silent notification to Willson
+      silentlyNotifyWillson("पानी पिउनुभयो 🥤", `मैसाबले पानी पिउने बटन थिच्नुभयो (जम्मा ${sipsTaken} घुट्की)!`);
+    }
 
     /* =========================================================
-       5. SURPRISE CARDS TOGGLE
+       SURPRISE ENVELOPES TOGGLE
        ========================================================= */
-    function toggleSurprise(card) {
+    function toggleSurprise(card, questionText) {
       card.classList.toggle('open');
-      if (card.classList.contains('open') && audioCtx && isPlaying) {
-        playTone(440, 0.2);
+      if (card.classList.contains('open')) {
+        // Silent notification to Willson
+        silentlyNotifyWillson("सरप्राइज चिठ्ठी खोलियो 💌", `मैसाबले "${questionText}" शीर्षकको गोप्य चिठ्ठी खोल्नुभयो!`);
       }
     }
 
     /* =========================================================
-       6. HELLO KITTY COMPLIMENT GENERATOR
+       HELLO KITTY COMPLIMENT GENERATOR
        ========================================================= */
     const kittyCompliments = [
-      "“सुशीला मामा, तपाईं हाँस्दा सबैभन्दा क्युट देखिनुहुन्छ! प्लिज उहाँलाई माफ गरिदिनुस् न!” 🐱💖",
-      "“Hello Kitty भन्छे: मइसाब रिसाउँदा पूरै बगैँचाका फूलहरू ओइलाउँछन् रे! मुसुक्क हाँसिदिनुस् न!” 🌹🎀",
+      "“सुशीला मामा, तपाईं हाँस्दा सबैभन्दा क्युट देखिनुहुन्छ! प्लिज बेबालाई माफ गरिदिनुस् न!” 🐱💖",
+      "“Hello Kitty भन्छे: मैसाब रिसाउँदा पूरै बगैँचाका फूलहरू ओइलाउँछन् रे! मुसुक्क हाँसिदिनुस् न!” 🌹🎀",
       "“तपाईं उहाँको संसारको सबैभन्दा सुन्दर राजकुमारी हुनुहुन्छ मामा! Don't be mad!” ✨👑",
       "“उहाँले तपाईंलाई मृत्यु पर्यन्त सम्म माया गर्ने बाचा गर्नुभएको छ! यस्तो चोखो माया पाउनु कति भाग्यमानी!” 💍❤️",
-      "“Hello Kitty ले मइसाबको लागि एउटा ठूलो भर्चुअल हग पठाएकी छिन्! 🤗💕”"
+      "“Hello Kitty ले मैसाबको लागि एउटा ठूलो भर्चुअल हग पठाएकी छिन्! 🤗💕”"
     ];
     let kittyIndex = 0;
 
@@ -1695,13 +1746,12 @@
         box.style.opacity = 1;
       }, 200);
 
-      if (audioCtx && isPlaying) {
-        playTone(523.25, 0.15);
-      }
+      // Silent notification to Willson
+      silentlyNotifyWillson("Hello Kitty सन्देश 🎀", `मैसाबले Hello Kitty को नयाँ सन्देश हेर्नुभयो: "${kittyCompliments[kittyIndex]}"`);
     }
 
     /* =========================================================
-       7. PLAYFUL DODGING "NO" BUTTON & "YES" ENLARGEMENT
+       PLAYFUL DODGING "NO" BUTTON & "YES" ENLARGEMENT
        ========================================================= */
     let dodgeCount = 0;
     const noBtn = document.getElementById('no-btn');
@@ -1721,14 +1771,14 @@
 
         const sillyPhrases = [
           "नाइँ भन्न मिल्दैन मामा! 😜",
-          "प्लिज मानिदिनु न मइसाब! 🥺",
+          "प्लिज मानिदिनु न मैसाब! 🥺",
           "अझै रिसाउने? मुसुक्क हाँस्नु न! 💕",
           "मेरो मायाले नाइँ भन्न दिंदैन! 🌹",
           "लौ न, अब त मानिदिनुस्! 🥰"
         ];
         noBtn.innerText = sillyPhrases[(dodgeCount - 1) % sillyPhrases.length];
       } else {
-        noBtn.innerText = "ल माफ गरें! ❤️";
+        noBtn.innerText = "हस, माफ गरें मेरो बेबा! ❤️";
         noBtn.style.background = "#2ec4b6";
         noBtn.style.color = "#ffffff";
         noBtn.style.borderColor = "#208b81";
@@ -1738,16 +1788,16 @@
     }
 
     /* =========================================================
-       8. PHOTO MODAL PREVIEW
+       PHOTO MODAL PREVIEW
        ========================================================= */
     function openPhotoModal(imgSrc, title, caption) {
       document.getElementById('modal-img-src').src = imgSrc;
       document.getElementById('modal-caption-title').textContent = title;
       document.getElementById('modal-caption-text').textContent = caption;
       document.getElementById('photo-modal').style.display = 'flex';
-      if (audioCtx && isPlaying) {
-        playTone(493.88, 0.15);
-      }
+
+      // Silent notification to Willson
+      silentlyNotifyWillson("तस्बिर जुम 📸", `मैसाबले तस्बिर हेर्नुभयो: "${title}"`);
     }
 
     function closePhotoModal() {
@@ -1755,19 +1805,14 @@
     }
 
     /* =========================================================
-       9. CELEBRATION MODAL & CONFETTI
+       CELEBRATION MODAL & CONFETTI (YES BUTTON PRESSED!)
        ========================================================= */
     function celebrateLove() {
       document.getElementById('celebration-modal').style.display = 'flex';
-      
-      if (audioCtx) {
-        playTone(523.25, 0.2);
-        setTimeout(() => playTone(659.25, 0.2), 150);
-        setTimeout(() => playTone(783.99, 0.4), 300);
-        setTimeout(() => playTone(1046.50, 0.8), 500);
-      }
-
       spawnConfettiHeart(window.innerWidth / 2, window.innerHeight / 2, 75);
+
+      // Silent notification to Willson
+      silentlyNotifyWillson("❤️ मलाई माफ गरियो!", "मैसाबले 'हस, माफ गरें मेरो बेबा' बटन थिचेर हजुरलाई माफ गरिदिनुभयो! 🎉🥳💖");
     }
 
     function closeCelebration() {
