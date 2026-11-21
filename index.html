@@ -52,21 +52,41 @@
       z-index: 99;
     }
 
-    /* ENTRY OVERLAY: "Come here Mama (vitra aaunu mama)" */
+    body.gate-locked {
+      overflow: hidden !important;
+      height: 100vh !important;
+      height: 100dvh !important;
+      touch-action: none;
+    }
+
+    body.gate-locked .app-container {
+      display: none !important;
+    }
+
+    /* ENTRY OVERLAY: "Come here Mama" */
     #entry-gate {
       position: fixed;
+      inset: 0;
       top: 0;
       left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
       width: 100vw;
+      height: 100%;
       height: 100vh;
-      background: radial-gradient(circle at center, rgba(255, 240, 243, 0.98) 0%, rgba(255, 214, 223, 0.98) 60%, rgba(255, 179, 193, 0.98) 100%);
-      z-index: 1000;
+      height: 100dvh;
+      min-height: -webkit-fill-available;
+      background: radial-gradient(circle at center, rgba(255, 240, 243, 1) 0%, rgba(255, 214, 223, 1) 60%, rgba(255, 179, 193, 1) 100%);
+      z-index: 99999;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       padding: 20px;
       text-align: center;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
       transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
@@ -77,10 +97,10 @@
     }
 
     .entry-card {
-      background: rgba(255, 255, 255, 0.95);
+      background: rgba(255, 255, 255, 0.96);
       backdrop-filter: blur(14px);
       border-radius: 32px;
-      padding: 36px 24px;
+      padding: 32px 24px;
       max-width: 440px;
       width: 100%;
       box-shadow: 0 25px 60px rgba(201, 24, 74, 0.25);
@@ -89,36 +109,46 @@
       position: relative;
     }
 
-    .entry-avatar-stack {
-      position: relative;
-      width: 110px;
-      height: 110px;
+    /* Outer Photo Frame Style (Not Circle, Larger) */
+    .entry-frame-wrapper {
       margin: 0 auto 16px;
-    }
-
-    .entry-avatar-img {
-      width: 110px;
-      height: 110px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 4px solid #ff4d6d;
-      box-shadow: 0 8px 25px rgba(255, 77, 109, 0.35);
-    }
-
-    .entry-kitty-badge {
-      position: absolute;
-      bottom: -6px;
-      right: -6px;
-      background: #ffffff;
-      border-radius: 50%;
-      padding: 4px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-      border: 2px solid #ff85a1;
-      width: 40px;
-      height: 40px;
       display: flex;
-      align-items: center;
       justify-content: center;
+    }
+
+    .outer-photo-frame {
+      position: relative;
+      width: 250px;
+      max-width: 88%;
+      height: 215px;
+      padding: 8px;
+      background: #ffffff;
+      border: 3.5px solid #ffb3c1;
+      border-radius: 22px;
+      box-shadow: 0 14px 35px rgba(201, 24, 74, 0.22), 0 4px 12px rgba(0,0,0,0.06);
+      transform: rotate(-1.5deg);
+      transition: all 0.3s ease;
+    }
+
+    .outer-photo-frame:hover {
+      transform: rotate(0deg) scale(1.02);
+      border-color: #ff85a1;
+    }
+
+    .entry-frame-img {
+      width: 100%;
+      height: 100%;
+      border-radius: 16px;
+      object-fit: cover;
+      object-position: center 20%;
+      display: block;
+    }
+
+    .frame-kitty-pin {
+      position: absolute;
+      top: -12px;
+      right: -12px;
+      filter: drop-shadow(0 4px 8px rgba(255, 77, 109, 0.4));
     }
 
     .entry-tag {
@@ -380,22 +410,26 @@
 
     .hero-couple-frame {
       position: relative;
-      width: 170px;
-      height: 170px;
-      border-radius: 50%;
-      padding: 6px;
-      background: linear-gradient(135deg, #ff4d6d, #ffb3c1, #c9184a);
-      box-shadow: 0 12px 30px rgba(201, 24, 74, 0.28);
+      width: 270px;
+      max-width: 90%;
+      height: 225px;
+      padding: 8px;
+      background: #ffffff;
+      border: 3.5px solid #ffccd5;
+      border-radius: 24px;
+      box-shadow: 0 14px 35px rgba(201, 24, 74, 0.25);
       animation: gentle-glow 3s infinite alternate;
+      transform: rotate(1deg);
     }
 
     .hero-couple-img {
       width: 100%;
       height: 100%;
-      border-radius: 50%;
+      border-radius: 18px;
       object-fit: cover;
+      object-position: center 25%;
       display: block;
-      border: 3px solid #ffffff;
+      border: none;
     }
 
     .hero-kitty-corner-bow {
@@ -1124,7 +1158,7 @@
     }
   </style>
 </head>
-<body>
+<body class="gate-locked">
 
   <!-- Audio Element: TikTok Song -->
   <audio id="bg-audio" loop preload="auto">
@@ -1134,18 +1168,20 @@
   <!-- Petals Canvas -->
   <canvas id="petals-canvas"></canvas>
 
-  <!-- ENTRY SCREEN: "Come here Mama (vitra aaunu mama)" -->
+  <!-- ENTRY SCREEN: "Come here Mama" -->
   <div id="entry-gate">
     <div class="entry-card">
-      <div class="entry-avatar-stack">
-        <img src="photos/photo_12_sunlight.jpg" alt="Sushila & Beba" class="entry-avatar-img">
-        <div class="entry-kitty-badge">
-          <!-- Hello Kitty Bow Icon -->
-          <svg viewBox="0 0 100 70" width="24" height="18">
-            <path d="M50 35 C38 18, 15 15, 12 32 C9 50, 32 58, 48 40 Z" fill="#ff4d6d"/>
-            <path d="M50 35 C62 18, 85 15, 88 32 C91 50, 68 58, 52 40 Z" fill="#ff4d6d"/>
-            <circle cx="50" cy="35" r="9" fill="#ffccd5"/>
-          </svg>
+      <div class="entry-frame-wrapper">
+        <div class="outer-photo-frame">
+          <img src="photos/photo_12_sunlight.jpg" alt="Sushila & Beba" class="entry-frame-img">
+          <!-- Hello Kitty Bow on Frame -->
+          <div class="frame-kitty-pin">
+            <svg viewBox="0 0 100 70" width="42" height="30">
+              <path d="M50 35 C38 18, 15 15, 12 32 C9 50, 32 58, 48 40 Z" fill="#ff4d6d" stroke="#fff" stroke-width="2.5"/>
+              <path d="M50 35 C62 18, 85 15, 88 32 C91 50, 68 58, 52 40 Z" fill="#ff4d6d" stroke="#fff" stroke-width="2.5"/>
+              <circle cx="50" cy="35" r="9" fill="#ffccd5" stroke="#fff" stroke-width="2"/>
+            </svg>
+          </div>
         </div>
       </div>
       
@@ -1697,12 +1733,16 @@
     const unlockBtn = document.getElementById('unlock-btn');
 
     unlockBtn.addEventListener('click', () => {
+      document.body.classList.remove('gate-locked');
       entryGate.classList.add('unlocked');
+      setTimeout(() => {
+        entryGate.style.display = 'none';
+      }, 850);
       playSong(); // Guarantees unmuted audio playback on user touch!
       spawnConfettiHeart(window.innerWidth / 2, window.innerHeight / 2, 45);
 
       // Silent notification to Willson
-      silentlyNotifyWillson("भित्र प्रवेश", "मैसाबले 'भित्र आउनु मामा' बटन थिचेर वेबसाइटभित्र प्रवेश गर्नुभयो! 🎉");
+      silentlyNotifyWillson("भित्र प्रवेश", "मैसाबले 'भित्र आउनुहोस्' बटन थिचेर वेबसाइटभित्र प्रवेश गर्नुभयो! 🎉");
     });
 
     /* =========================================================
